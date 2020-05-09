@@ -1,3 +1,4 @@
 {
-  "eslint.nodePath": "src/"
+  "eslint.nodePath": "src/",
+  "editor.formatOnSave": true
 }

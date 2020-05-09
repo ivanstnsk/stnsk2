@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   root: true,
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
   plugins: ['react', '@typescript-eslint'],
   globals: {
     // https://github.com/sindresorhus/globals/issues/82
@@ -21,11 +21,10 @@ module.exports = {
     },
   },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
     'airbnb-base',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:import/typescript',
   ],
   rules: {
     'prettier/prettier': 0,

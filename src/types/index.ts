@@ -1,1 +1,1 @@
-export {EModules} from './module';
+export { EModules } from './module';
