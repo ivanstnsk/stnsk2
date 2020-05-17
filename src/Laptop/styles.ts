@@ -16,6 +16,7 @@ const styles: AppStyles = ({colors: {primary}}) => {
         display: 'flex',
         flex: 1,
         justifyContent: 'center',
+        alignItems: 'center',
       };
     },
   };
