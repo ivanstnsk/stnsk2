@@ -2,26 +2,19 @@ import {AppStyles} from 'types/style';
 import {useTStyles} from 'hooks';
 import logoRes from 'assets/icons/logo.svg';
 
-// type IntroCircleStylesProps = {
-//   x: number;
-//   y: number;
-// };
 
 const styles: AppStyles = ({colors: {primary: {bg}}}) => {
   return {
-    container: () => {
-      return {
-        position: 'relative',
-        width: 568,
-        height: 568,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        overflow: 'visible',
-        // border: '1px solid red',
-        borderRadius: '50%',
-        backgroundColor: bg,
-      };
+    container: {
+      position: 'relative',
+      width: 568,
+      height: 568,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      overflow: 'visible',
+      borderRadius: '50%',
+      backgroundColor: bg,
     },
     circleBg: {
       position: 'absolute',
@@ -39,7 +32,6 @@ const styles: AppStyles = ({colors: {primary: {bg}}}) => {
       bottom: 0,
       width: '100%',
       height: '100%',
-      // border: '1px solid red',
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'center',
@@ -56,17 +48,6 @@ const styles: AppStyles = ({colors: {primary: {bg}}}) => {
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'contain',
-    },
-    logoBack: {
-      width: 64,
-      height: 64,
-      backgroundImage: `url(${logoRes})`,
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'contain',
-      '& path': {
-        stroke: 'black',
-      },
     },
     text: {
       fontStyle: 'normal',
@@ -85,5 +66,4 @@ const styles: AppStyles = ({colors: {primary: {bg}}}) => {
 
 type TStyles = Record<string, any>;
 
-// export const useStyles = (props: IntroCircleStylesProps): TStyles => useTStyles(styles, props);
 export const useStyles = (): TStyles => useTStyles(styles);

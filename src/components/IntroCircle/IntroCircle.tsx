@@ -1,52 +1,38 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useRef, useCallback} from 'react';
 
+import {useMouseMove} from 'hooks';
 import {interpolate, getDistance} from 'utils';
 
 import {useStyles} from './styles';
 
-type TMouseCoords = {
-  x: number;
-  y: number;
+
+type TIntroCircleProps = {
+  id: string;
 };
 
-
-export const IntroCircle: React.FC<{}> = () => {
-  // const [mouseCoords, setMouseCoords] = useState<TMouseCoords>({x: 0, y: 0});
+export const IntroCircle: React.FC<TIntroCircleProps> = ({id}) => {
+  const classes = useStyles();
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
-  const content2Ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    window.addEventListener('mousemove', (event: MouseEvent): void => {
-      const {pageX, pageY} = event;
-      const semiW = window.innerWidth / 2;
-      const semiH = window.innerHeight / 2;
-      const x = interpolate(pageX - semiW, window.innerWidth, 100);
-      const y = interpolate(pageY - semiH, window.innerHeight, 100);
+  const handleMouseMove = useCallback((xm: number, ym: number) => {
+    const semiW = window.innerWidth / 2;
+    const semiH = window.innerHeight / 2;
+    const x = interpolate(xm - semiW, window.innerWidth, 100);
+    const y = interpolate(ym - semiH, window.innerHeight, 100);
 
-      let d = interpolate(getDistance(semiW, semiH, pageX, pageY), semiW, 30) - 10;
-      if (d < 0) d = 0;
+    let d = interpolate(getDistance(semiW, semiH, xm, ym), semiW, 30) - 10;
+    if (d < 0) d = 0;
 
-      // setMouseCoords({x, y});
-      if (containerRef && containerRef.current) {
-        containerRef.current.style.transform = `perspective(600px) rotate3d(${-y}, ${x}, 0, ${d}deg)`;
-        // containerRef.current.style.transform = `rotateY(${x}deg)`;
-      }
-      if (contentRef && contentRef.current) {
-        contentRef.current.style.transform = `perspective(600px) rotate3d(${-y}, ${x}, 0, ${d}deg)`;
-        // containerRef.current.style.transform = `rotateY(${x}deg)`;
-      }
-      if (content2Ref && content2Ref.current) {
-        content2Ref.current.style.transform = `perspective(600px) rotate3d(${-y}, ${x}, 0, -${d}deg)`;
-        // containerRef.current.style.transform = `rotateY(${x}deg)`;
-      }
-    });
+    if (containerRef && containerRef.current) {
+      containerRef.current.style.transform = `perspective(600px) rotate3d(${-y}, ${x}, 0, ${d}deg)`;
+    }
+    if (contentRef && contentRef.current) {
+      contentRef.current.style.transform = `perspective(600px) rotate3d(${-y}, ${x}, 0, -${d / 2}deg)`;
+    }
   }, []);
 
-
-  // console.log(deltaX);
-
-  const classes = useStyles();
+  useMouseMove(id, handleMouseMove);
 
   return (
     <div className={classes.container}>
@@ -54,23 +40,9 @@ export const IntroCircle: React.FC<{}> = () => {
         ref={containerRef}
         className={classes.circleBg}
       />
-      {/* <div
-        className={classes.content}
-        ref={contentRef}
-        style={{color: 'black'}}
-      >
-        <div className={classes.logoBack} />
-        <div className={classes.text} style={{color: 'black'}}>
-          Hello, I’m Ivan Stinsky
-          <div className={classes.bold} style={{color: 'black'}}>
-            JS Fullstack Developer
-          </div>
-          from Kharkiv, Ukraine
-        </div>
-      </div> */}
       <div
         className={classes.content}
-        ref={content2Ref}
+        ref={contentRef}
       >
         <div className={classes.logo} />
         <div className={classes.text}>

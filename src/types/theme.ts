@@ -9,4 +9,7 @@ export interface AppTheme extends DefaultTheme {
       circleBg: EColors;
     };
   };
+  gradients: {
+    bg: string;
+  };
 }

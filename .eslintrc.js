@@ -8,6 +8,7 @@ module.exports = {
     // https://github.com/sindresorhus/globals/issues/82
     fetch: true,
     Response: true,
+    window: true,
   },
   env: {
     jest: true,
