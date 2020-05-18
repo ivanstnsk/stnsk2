@@ -29,6 +29,7 @@ export const GradientBackground: React.FC<TGradientBackgroundProps> = ({
 
     if (containerRef && containerRef.current) {
       containerRef.current.style.transform = `perspective(600px) rotate3d(0, ${x - y}, 0, ${d}deg)`;
+      containerRef.current.style.transition = 'transform 0.5s';
     }
   }, []);
 

@@ -8,6 +8,8 @@ export const theme: AppTheme = {
     primary: {
       bg: EColors.ULTRA_DARK_BLUE,
       circleBg: EColors.DARK_BLUE,
+      greenMedium: '#81AF65',
+      greyUltralight: '#F2F2F2',
     },
   },
   gradients: {

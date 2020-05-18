@@ -1,8 +1,9 @@
-import React, {useRef, useCallback} from 'react';
+import React, {useRef, useCallback, useEffect} from 'react';
 
 import {useMouseMove} from 'hooks';
 import {interpolate, getDistance} from 'utils';
 
+import {MainButton} from '../MainButton';
 import {useStyles} from './styles';
 
 
@@ -10,12 +11,17 @@ type TIntroCircleProps = {
   id: string;
 };
 
+let activated = false;
+
 export const IntroCircle: React.FC<TIntroCircleProps> = ({id}) => {
   const classes = useStyles();
   const containerRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = useCallback((xm: number, ym: number) => {
+    if (!activated) {
+      return;
+    }
     const semiW = window.innerWidth / 2;
     const semiH = window.innerHeight / 2;
     const x = interpolate(xm - semiW, window.innerWidth, 100);
@@ -26,13 +32,21 @@ export const IntroCircle: React.FC<TIntroCircleProps> = ({id}) => {
 
     if (containerRef && containerRef.current) {
       containerRef.current.style.transform = `perspective(600px) rotate3d(${-y}, ${x}, 0, ${d}deg)`;
+      containerRef.current.style.transition = 'transform 0.3s';
     }
     if (contentRef && contentRef.current) {
-      contentRef.current.style.transform = `perspective(600px) rotate3d(${-y}, ${x}, 0, -${d / 2}deg)`;
+      contentRef.current.style.transform = `perspective(600px) rotate3d(${-y}, ${x}, 0, ${d / 2}deg)`;
+      contentRef.current.style.transition = 'transform 0.3s';
     }
   }, []);
 
   useMouseMove(id, handleMouseMove);
+
+  useEffect(() => {
+    setTimeout(() => {
+      activated = true;
+    }, 3000);
+  }, []);
 
   return (
     <div className={classes.container}>
@@ -50,8 +64,11 @@ export const IntroCircle: React.FC<TIntroCircleProps> = ({id}) => {
           <div className={classes.bold}>
             JS Fullstack Developer
           </div>
-          from Kharkiv, Ukraine
+          <div className={classes.small}>
+            from Kharkiv, Ukraine
+          </div>
         </div>
+        <MainButton>Get in touch</MainButton>
       </div>
     </div>
   );
