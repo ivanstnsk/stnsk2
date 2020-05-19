@@ -11,7 +11,7 @@ export const Laptop: React.FC<{}> = () => {
   const [showMode, setShowMode] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setShowMode(true), 3000);
+    setTimeout(() => setShowMode(true), 500);
   }, []);
 
   return (
@@ -25,6 +25,7 @@ export const Laptop: React.FC<{}> = () => {
         />
         <IntroCircle
           id="main-circle"
+          showMode={showMode}
         />
       </GradientBackground>
     </div>

@@ -9,48 +9,14 @@ const styles: AppStyles = ({
   },
 }) => {
   return {
-    '@keyframes showUpContainer': {
-      from: {
-        width: 100,
-        height: 100,
-        opacity: 0,
-      },
-      '40%': {
-        width: 100,
-        height: 100,
-        opacity: 1,
-      },
-      '80%': {
-        width: 568,
-        height: 568,
-      },
-      to: {
-        width: 568,
-        height: 568,
-      },
-    },
-    '@keyframes showUpContent': {
-      from: {
-        opacity: 0,
-      },
-      '80%': {
-        opacity: 0,
-      },
-      to: {
-        opacity: 1,
-      },
-    },
     container: {
       position: 'relative',
-      // width: 568,
-      // height: 568,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
       overflow: 'visible',
       borderRadius: '50%',
       backgroundColor: bg,
-      // animation: '$showUpContainer 1.6s',
       transition: 'transform 1s ease',
       border: '1px solid red',
 
@@ -66,7 +32,6 @@ const styles: AppStyles = ({
       borderRadius: '50%',
       backgroundColor: bg,
       filter: 'drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.3))',
-      animation: '$showUpContainer 3s',
       animationFillMode: 'forwards',
       transition: 'width 1.6s height 1.6s ease',
     },
@@ -83,7 +48,7 @@ const styles: AppStyles = ({
       justifyContent: 'center',
       alignItems: 'center',
       textAlign: 'center',
-      animation: '$showUpContent 2.5s',
+      opacity: 0,
     },
     logo: {
       width: 64,

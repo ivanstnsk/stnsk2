@@ -7,16 +7,15 @@ import {interpolate, getDistance} from 'utils';
 
 import {MainButton} from '../MainButton';
 import {useStyles} from './styles';
+import {
+  TIntroCircleProps,
+  TStylesApplier,
+} from './types';
 
-
-type TIntroCircleProps = {
-  id: string;
-  showMode?: boolean;
-};
 
 let activated = false;
 
-const TRANSFORMATIONS = [
+const FOLLOW_STYLES = [
   [
     (x: number, y: number, d: number) => `perspective(600px) rotate3d(${-y}, ${x}, 0, ${d}deg)`,
     () => 'transform 0.3s',
@@ -27,11 +26,7 @@ const TRANSFORMATIONS = [
   ],
 ];
 
-type TStylesCalculator =
-  | ((nodeRef: React.RefObject<HTMLDivElement>, showMode: boolean, styleId: number) => void)
-  | undefined;
-
-const getStylesCalculator = (xm: number, ym: number): TStylesCalculator => {
+const getFollowStylesApplier = (xm: number, ym: number): TStylesApplier => {
   if (!activated) {
     return;
   }
@@ -44,8 +39,8 @@ const getStylesCalculator = (xm: number, ym: number): TStylesCalculator => {
   if (d < 0) d = 0;
 
   // eslint-disable-next-line consistent-return
-  return (nodeRef: React.RefObject<HTMLDivElement>, showMode: boolean, styleId: number): void => {
-    const styles = TRANSFORMATIONS[styleId];
+  return (nodeRef: React.RefObject<HTMLDivElement>, styleId: number): void => {
+    const styles = FOLLOW_STYLES[styleId];
 
     if (styles) {
       if (nodeRef.current) {
@@ -58,6 +53,39 @@ const getStylesCalculator = (xm: number, ym: number): TStylesCalculator => {
   };
 };
 
+const applyContentStyles = (nodeRef: React.RefObject<HTMLDivElement>, showMode: boolean): void => {
+  if (showMode) {
+    if (nodeRef.current) {
+      nodeRef.current.style.opacity = '1'; // eslint-disable-line no-param-reassign
+      nodeRef.current.style.transition = 'all 1s'; // eslint-disable-line no-param-reassign
+    }
+  } else {
+    // eslint-disable-next-line no-lonely-if
+    if (nodeRef.current) {
+      nodeRef.current.style.opacity = '0'; // eslint-disable-line no-param-reassign
+      nodeRef.current.style.transition = 'all 0.4s'; // eslint-disable-line no-param-reassign
+    }
+  }
+};
+
+const applyContainerStyles = (nodeRef: React.RefObject<HTMLDivElement>, showMode: boolean): void => {
+  if (showMode) {
+    if (nodeRef.current) {
+      nodeRef.current.style.width = '568px'; // eslint-disable-line no-param-reassign
+      nodeRef.current.style.height = '568px'; // eslint-disable-line no-param-reassign
+      nodeRef.current.style.transition = 'all 0.4s'; // eslint-disable-line no-param-reassign
+    }
+  } else {
+    // eslint-disable-next-line no-lonely-if
+    if (nodeRef.current) {
+      const size = window.innerWidth * 1.5;
+      nodeRef.current.style.width = `${size}px`; // eslint-disable-line no-param-reassign
+      nodeRef.current.style.height = `${size}px`; // eslint-disable-line no-param-reassign
+      nodeRef.current.style.transition = 'all 1s'; // eslint-disable-line no-param-reassign
+    }
+  }
+};
+
 export const IntroCircle: React.FC<TIntroCircleProps> = ({
   id,
   showMode = false,
@@ -67,10 +95,11 @@ export const IntroCircle: React.FC<TIntroCircleProps> = ({
   const contentRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = useCallback((xm: number, ym: number) => {
-    const applyStyles = getStylesCalculator(xm, ym);
-    if (applyStyles) {
-      applyStyles(containerRef, showMode, 0);
-      applyStyles(contentRef, showMode, 1);
+    const applyFollowStyles = getFollowStylesApplier(xm, ym);
+
+    if (applyFollowStyles) {
+      applyFollowStyles(containerRef, 0);
+      applyFollowStyles(contentRef, 1);
     }
   }, []);
 
@@ -81,6 +110,14 @@ export const IntroCircle: React.FC<TIntroCircleProps> = ({
       activated = true;
     }, 3000);
   }, []);
+
+  useEffect(() => {
+    applyContentStyles(contentRef, showMode);
+    // setTimeout(
+    //   () => applyContainerStyles(containerRef, showMode),
+    //   showMode ? 0 : 1000,
+    // );
+  }, [showMode]);
 
   return (
     <div className={classes.container}>
