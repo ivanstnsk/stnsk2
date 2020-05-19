@@ -1,4 +1,5 @@
 import {AppTheme} from 'types/theme';
+import {LAPTOP_MAIN_CIRCLE_BUTTON_SIZE} from 'constants/sizes';
 
 import {EColors} from './colors';
 
@@ -14,5 +15,10 @@ export const theme: AppTheme = {
   },
   gradients: {
     bg: 'radial-gradient(66.25% 131.01% at 50% 50%, #1F2124 0%, #1F2124 60.94%, #7BA661 100%)',
+  },
+  sizes: {
+    buttons: {
+      mainCircleButtonSize: LAPTOP_MAIN_CIRCLE_BUTTON_SIZE,
+    },
   },
 };

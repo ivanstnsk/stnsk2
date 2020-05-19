@@ -14,4 +14,9 @@ export interface AppTheme extends DefaultTheme {
   gradients: {
     bg: string;
   };
+  sizes: {
+    buttons: {
+      mainCircleButtonSize: number;
+    };
+  };
 }

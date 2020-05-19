@@ -1,17 +1,31 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 
 import {IntroCircle, GradientBackground} from 'components';
 
+import {CircleButtonsLayout} from './components';
 import {useStyles} from './styles';
 
 
 export const Laptop: React.FC<{}> = () => {
   const classes = useStyles();
+  const [showMode, setShowMode] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => setShowMode(true), 3000);
+  }, []);
 
   return (
     <div className={classes.container}>
       <GradientBackground id="laptop-gradient-bg">
-        <IntroCircle id="main-circle" />
+        <CircleButtonsLayout
+          showMode={showMode}
+          onButtonClick={(buttonId: string): void => {
+            setShowMode(false);
+          }}
+        />
+        <IntroCircle
+          id="main-circle"
+        />
       </GradientBackground>
     </div>
   );
