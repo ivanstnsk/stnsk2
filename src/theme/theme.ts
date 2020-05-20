@@ -10,7 +10,7 @@ export const theme: AppTheme = {
       bg: EColors.ULTRA_DARK_BLUE,
       circleBg: EColors.DARK_BLUE,
       greenMedium: '#81AF65',
-      greyUltralight: '#F2F2F2',
+      greyUltralight: 'rgba(255,255,255,0.6)',
     },
   },
   gradients: {

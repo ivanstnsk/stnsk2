@@ -19,7 +19,7 @@ export const Laptop: React.FC<{}> = () => {
       <GradientBackground id="laptop-gradient-bg">
         <CircleButtonsLayout
           showMode={showMode}
-          onButtonClick={(buttonId: string): void => {
+          onButtonClick={(): void => {
             setShowMode(false);
           }}
         />

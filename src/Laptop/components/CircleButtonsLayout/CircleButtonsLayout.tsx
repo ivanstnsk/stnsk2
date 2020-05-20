@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useCallback} from 'react';
+import React, {useRef, useEffect} from 'react';
 
 import {LAPTOP_MAIN_CIRCLE_BUTTON_SIZE} from 'constants/sizes';
 
@@ -69,22 +69,26 @@ export const CircleButtonsLayout: React.FC<TCircleButtonsLayoutProps> = ({
   return (
     <div className={classes.container}>
       <MainCircleButton
-        id="projects"
+        type="projects"
+        label="Projects"
         innerRef={projectsRef}
         onClick={onButtonClick}
       />
       <MainCircleButton
-        id="cv"
+        type="cv"
+        label="Curriculum vitae"
         innerRef={cvRef}
         onClick={onButtonClick}
       />
       <MainCircleButton
-        id="settings"
+        type="skills"
+        label="My skills"
         innerRef={settingsRef}
         onClick={onButtonClick}
       />
       <MainCircleButton
-        id="about"
+        type="contacts"
+        label="Contacts"
         innerRef={aboutRef}
         onClick={onButtonClick}
       />
