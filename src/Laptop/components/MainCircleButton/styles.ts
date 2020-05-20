@@ -79,6 +79,12 @@ const styles: AppStyles = ({
         opacity: 1,
         transition: 'opacity 0.3s ease',
       },
+      '&:hover $svg': {
+        '& circle': {
+          strokeWidth: 2.5,
+        },
+        animation: '$dash 2s linear infinite',
+      },
     },
     svg: {
       boxSizing: 'border-box',
@@ -88,13 +94,6 @@ const styles: AppStyles = ({
       top: 0,
       bottom: 0,
       strokeDasharray: 4,
-
-      '&:hover': {
-        '& circle': {
-          strokeWidth: 2.5,
-        },
-        animation: '$dashIcon 2s linear infinite',
-      },
     },
     icon: getIconStyles(),
     label: {
