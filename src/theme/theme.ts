@@ -11,6 +11,7 @@ export const theme: AppTheme = {
       circleBg: EColors.DARK_BLUE,
       greenMedium: '#81AF65',
       greyUltralight: 'rgba(255,255,255,0.6)',
+      greyUltraDark: 'rgba(255,255,255,0.1)',
     },
   },
   gradients: {

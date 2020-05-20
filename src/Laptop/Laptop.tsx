@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-import {IntroCircle, GradientBackground} from 'components';
+import {IntroCircle, GradientBackground, Footer} from 'components';
 
 import {CircleButtonsLayout} from './components';
 import {useStyles} from './styles';
@@ -28,6 +28,7 @@ export const Laptop: React.FC<{}> = () => {
           showMode={showMode}
         />
       </GradientBackground>
+      <Footer version="0.0.2" />
     </div>
   );
 };

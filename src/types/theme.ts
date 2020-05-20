@@ -9,6 +9,7 @@ export interface AppTheme extends DefaultTheme {
       circleBg: EColors;
       greenMedium: string;
       greyUltralight: string;
+      greyUltraDark: string;
     };
   };
   gradients: {
