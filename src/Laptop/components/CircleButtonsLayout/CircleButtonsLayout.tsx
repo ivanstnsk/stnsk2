@@ -34,6 +34,8 @@ const setButtonStyles = (
       // eslint-disable-next-line no-param-reassign
       buttonRef.current.style.top = `${semiH + ANCHORS[anchor][1]}px`;
       // eslint-disable-next-line no-param-reassign
+      buttonRef.current.style.opacity = '1';
+      // eslint-disable-next-line no-param-reassign
       buttonRef.current.style.transition = 'all 0.6s ease';
     }
   } else {
@@ -43,6 +45,8 @@ const setButtonStyles = (
       buttonRef.current.style.left = `${semiW - LAPTOP_MAIN_CIRCLE_BUTTON_SIZE / 2}px`;
       // eslint-disable-next-line no-param-reassign
       buttonRef.current.style.top = `${semiH - LAPTOP_MAIN_CIRCLE_BUTTON_SIZE / 2}px`;
+      // eslint-disable-next-line no-param-reassign
+      buttonRef.current.style.opacity = '0.1';
       // eslint-disable-next-line no-param-reassign
       buttonRef.current.style.transition = 'all 0.6s ease';
     }

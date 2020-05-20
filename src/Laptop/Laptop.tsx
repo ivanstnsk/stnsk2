@@ -20,7 +20,7 @@ export const Laptop: React.FC<{}> = () => {
         <CircleButtonsLayout
           showMode={showMode}
           onButtonClick={(): void => {
-            setShowMode(false);
+            // setShowMode(false);
           }}
         />
         <IntroCircle
