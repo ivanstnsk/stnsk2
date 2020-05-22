@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 
 import {LAPTOP_MAIN_CIRCLE_BUTTON_SIZE} from 'constants/sizes';
+import {SequenceAnimation} from 'utils';
 
 import {MainCircleButton} from '../MainCircleButton';
 
@@ -29,26 +30,24 @@ const setButtonStyles = (
 
   if (showMode) {
     if (buttonRef.current) {
-      // eslint-disable-next-line no-param-reassign
-      buttonRef.current.style.left = `${semiW + ANCHORS[anchor][0]}px`;
-      // eslint-disable-next-line no-param-reassign
-      buttonRef.current.style.top = `${semiH + ANCHORS[anchor][1]}px`;
-      // eslint-disable-next-line no-param-reassign
-      buttonRef.current.style.opacity = '1';
-      // eslint-disable-next-line no-param-reassign
-      buttonRef.current.style.transition = 'all 0.6s ease';
+      new SequenceAnimation<HTMLButtonElement>(buttonRef)
+        .delay(1000)
+        .style('display', 'visible')
+        .style('left', `${semiW + ANCHORS[anchor][0]}px`)
+        .style('top', `${semiH + ANCHORS[anchor][1]}px`)
+        .style('opacity', '1')
+        .style('transition', 'all 0.6s ease')
+        .apply();
     }
   } else {
     // eslint-disable-next-line no-lonely-if
     if (buttonRef.current) {
-      // eslint-disable-next-line no-param-reassign
-      buttonRef.current.style.left = `${semiW - LAPTOP_MAIN_CIRCLE_BUTTON_SIZE / 2}px`;
-      // eslint-disable-next-line no-param-reassign
-      buttonRef.current.style.top = `${semiH - LAPTOP_MAIN_CIRCLE_BUTTON_SIZE / 2}px`;
-      // eslint-disable-next-line no-param-reassign
-      buttonRef.current.style.opacity = '0.1';
-      // eslint-disable-next-line no-param-reassign
-      buttonRef.current.style.transition = 'all 0.6s ease';
+      new SequenceAnimation<HTMLButtonElement>(buttonRef)
+        .style('left', `${semiW - LAPTOP_MAIN_CIRCLE_BUTTON_SIZE / 2}px`)
+        .style('top', `${semiH - LAPTOP_MAIN_CIRCLE_BUTTON_SIZE / 2}px`)
+        .style('opacity', '0')
+        .style('transition', 'all 0.6s ease')
+        .apply();
     }
   }
 };

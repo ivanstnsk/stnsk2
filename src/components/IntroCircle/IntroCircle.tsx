@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 
 import {useMouseMove} from 'hooks';
-import {interpolate, getDistance} from 'utils';
+import {interpolate, getDistance, SequenceAnimation} from 'utils';
 
 import {MainButton} from '../MainButton';
 import {useStyles} from './styles';
@@ -53,35 +53,51 @@ const getFollowStylesApplier = (xm: number, ym: number): TStylesApplier => {
   };
 };
 
-const applyContentStyles = (nodeRef: React.RefObject<HTMLDivElement>, showMode: boolean): void => {
-  if (showMode) {
+const applyContentStyles = (nodeRef: React.RefObject<HTMLDivElement>, show: boolean): void => {
+  if (show) {
     if (nodeRef.current) {
-      nodeRef.current.style.opacity = '1'; // eslint-disable-line no-param-reassign
-      nodeRef.current.style.transition = 'all 1s'; // eslint-disable-line no-param-reassign
+      new SequenceAnimation<HTMLDivElement>(nodeRef)
+        .delay(2000)
+        .style('opacity', '1')
+        .style('transition', 'all 0.4s')
+        .apply();
     }
   } else {
     // eslint-disable-next-line no-lonely-if
     if (nodeRef.current) {
-      nodeRef.current.style.opacity = '0'; // eslint-disable-line no-param-reassign
-      nodeRef.current.style.transition = 'all 0.4s'; // eslint-disable-line no-param-reassign
+      new SequenceAnimation<HTMLDivElement>(nodeRef)
+        .style('opacity', '0')
+        .style('transition', 'all 0.4s')
+        .apply();
     }
   }
 };
 
-const applyContainerStyles = (nodeRef: React.RefObject<HTMLDivElement>, showMode: boolean): void => {
-  if (showMode) {
+const applyContainerStyles = (nodeRef: React.RefObject<HTMLDivElement>, show: boolean): void => {
+  if (show) {
     if (nodeRef.current) {
-      nodeRef.current.style.width = '568px'; // eslint-disable-line no-param-reassign
-      nodeRef.current.style.height = '568px'; // eslint-disable-line no-param-reassign
-      nodeRef.current.style.transition = 'all 0.4s'; // eslint-disable-line no-param-reassign
+      new SequenceAnimation<HTMLDivElement>(nodeRef)
+        .style('opacity', '1')
+        .style('transition', 'opacity 0.4s')
+        .delay(400)
+        .style('width', '568px')
+        .style('height', '568px')
+        .style('transition', 'all 1s')
+        .apply();
     }
   } else {
     // eslint-disable-next-line no-lonely-if
     if (nodeRef.current) {
-      const size = window.innerWidth * 1.5;
-      nodeRef.current.style.width = `${size}px`; // eslint-disable-line no-param-reassign
-      nodeRef.current.style.height = `${size}px`; // eslint-disable-line no-param-reassign
-      nodeRef.current.style.transition = 'all 1s'; // eslint-disable-line no-param-reassign
+      const size = 100;
+      new SequenceAnimation<HTMLDivElement>(nodeRef)
+        .delay(500)
+        .style('width', `${size}px`)
+        .style('height', `${size}px`)
+        .style('transition', 'all 1s')
+        .delay(1000)
+        .style('opacity', '0')
+        .style('transition', 'opacity 0.4s')
+        .apply();
     }
   }
 };
@@ -113,10 +129,7 @@ export const IntroCircle: React.FC<TIntroCircleProps> = ({
 
   useEffect(() => {
     applyContentStyles(contentRef, showMode);
-    // setTimeout(
-    //   () => applyContainerStyles(containerRef, showMode),
-    //   showMode ? 0 : 1000,
-    // );
+    applyContainerStyles(containerRef, showMode);
   }, [showMode]);
 
   return (

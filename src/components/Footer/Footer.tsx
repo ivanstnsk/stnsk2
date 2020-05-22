@@ -12,6 +12,8 @@ export const Footer: React.FC<{}> = () => {
   return (
     <div className={classes.container}>
       <div className={classes.version}>
+        DEV ENV
+        <br />
         Build version: {buildNumber}
       </div>
     </div>

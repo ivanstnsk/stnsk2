@@ -70,6 +70,7 @@ const styles: AppStyles = ({
       outline: 'none',
       cursor: 'pointer',
       transition: 'transform 0.3s ease',
+      opacity: 0,
 
       '&:hover': {
         transform: 'scaleX(1.1) scaleY(1.1)',
