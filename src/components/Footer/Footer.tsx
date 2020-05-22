@@ -1,21 +1,18 @@
 import React from 'react';
 
+import metadata from 'metadata.json';
+
 import {useStyles} from './styles';
 
 
-type TFooterProps = {
-  version: string;
-};
-
-export const Footer: React.FC<TFooterProps> = ({
-  version,
-}) => {
+export const Footer: React.FC<{}> = () => {
   const classes = useStyles();
+  const buildNumber = `${metadata.buildVersion.major}.${metadata.buildVersion.minor}.${metadata.buildVersion.patch}`;
 
   return (
     <div className={classes.container}>
       <div className={classes.version}>
-        Build version: {version}
+        Build version: {buildNumber}
       </div>
     </div>
   );

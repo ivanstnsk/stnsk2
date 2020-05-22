@@ -28,7 +28,7 @@ export const Laptop: React.FC<{}> = () => {
           showMode={showMode}
         />
       </GradientBackground>
-      <Footer version="0.0.2" />
+      <Footer />
     </div>
   );
 };
