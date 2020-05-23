@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,7 +26,7 @@ const routes = [
   { path: Routes.CV, Component: CV },
 ];
 
-export const AppContainer: React.FC<{}> = () => {
+const AppContainerComp: React.FC<{}> = () => {
   const classes = useStyles();
 
   return (
@@ -62,22 +62,10 @@ export const AppContainer: React.FC<{}> = () => {
               </Route>
             ))}
           </div>
-          {/* <Switch>
-            <Route path={Routes.ABOUT}>
-              <About transitionState="entered" />
-            </Route>
-            <Route path={Routes.PROJECTS}>
-              <Projects transitionState="entered" />
-            </Route>
-            <Route path={Routes.CONTACTS}>
-              <Contacts transitionState="entered" />
-            </Route>
-            <Route path={Routes.CV}>
-              <CV transitionState="entered" />
-            </Route>
-          </Switch> */}
         </Route>
       </Switch>
     </Router>
   );
 };
+
+export const AppContainer = memo(AppContainerComp, () => true);

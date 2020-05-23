@@ -1,9 +1,17 @@
 import { AppStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
+// eslint-disable-next-line
+// @ts-ignore
 import cvIconRes from 'assets/icons/cv-icon.svg';
+// eslint-disable-next-line
+// @ts-ignore
 import projectsIconRes from 'assets/icons/projects-icon.svg';
+// eslint-disable-next-line
+// @ts-ignore
 import skillsIconRes from 'assets/icons/skills-icon.svg';
+// eslint-disable-next-line
+// @ts-ignore
 import contactsIconRes from 'assets/icons/contacts-icon.svg';
 
 import { TButtonType } from './types';

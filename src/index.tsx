@@ -9,10 +9,8 @@ import './index.css';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <AppContainer />
-    </ThemeProvider>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <AppContainer />
+  </ThemeProvider>,
   document.getElementById('root'),
 );

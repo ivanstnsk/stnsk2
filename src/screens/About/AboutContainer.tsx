@@ -1,10 +1,10 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, memo } from 'react';
 
 import { useModule } from 'hooks';
 import { Fallback } from 'components';
 
 
-export const AboutContainer: React.FC<{}> = () => {
+const AboutContainerComp: React.FC<{}> = () => {
   const module = useModule();
   const AboutScreen = React.lazy(() => import(`./${module}`));
 
@@ -14,3 +14,5 @@ export const AboutContainer: React.FC<{}> = () => {
     </Suspense>
   );
 };
+
+export const AboutContainer = memo(AboutContainerComp);

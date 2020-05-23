@@ -1,7 +1,9 @@
 import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
-import photoRes from 'assets/img/photo.jpg';
+// eslint-disable-next-line
+// @ts-ignore
+import photoRes from './img/photo.jpg';
 
 
 const styles: AppStyles = ({

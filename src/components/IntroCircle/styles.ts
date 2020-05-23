@@ -1,6 +1,5 @@
 import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
-import logoRes from 'assets/icons/logo.svg';
 
 
 const styles: AppStyles = ({
@@ -44,16 +43,6 @@ const styles: AppStyles = ({
       alignItems: 'center',
       textAlign: 'center',
       opacity: 0,
-    },
-    logo: {
-      width: 64,
-      height: 64,
-      minHeight: 64,
-      display: 'block',
-      backgroundImage: `url(${logoRes})`,
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'contain',
     },
     text: {
       width: 400,

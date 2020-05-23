@@ -5,6 +5,7 @@ import React, {
 import { useMouseMove } from 'hooks';
 import { interpolate, getDistance, SequenceAnimation } from 'utils';
 
+import { SvgIcon } from '../SvgIcon';
 import { MainButton } from '../MainButton';
 import { useStyles } from './styles';
 import {
@@ -139,7 +140,12 @@ export const IntroCircle: React.FC<TIntroCircleProps> = ({
         className={classes.content}
         ref={contentRef}
       >
-        <div className={classes.logo} />
+        <SvgIcon
+          type="logo"
+          color="rgba(255,255,255,0.6)"
+          width={64}
+          height={64}
+        />
         <div className={classes.text}>
           Hello, I’m Ivan Stinsky
           <div className={classes.bold}>

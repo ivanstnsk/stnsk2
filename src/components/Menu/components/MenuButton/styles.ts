@@ -1,11 +1,6 @@
 import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
-import cvIconRes from 'assets/icons/cv-icon.svg';
-import projectsIconRes from 'assets/icons/projects-icon.svg';
-import aboutIconRes from 'assets/icons/skills-icon.svg';
-import contactsIconRes from 'assets/icons/contacts-icon.svg';
-
 import { TButtonType } from './types';
 
 
@@ -14,42 +9,13 @@ type TStylesProps = {
   active: boolean;
 };
 
-const getIcon = (type: TButtonType): string => {
-  switch (type) {
-    case 'cv':
-      return cvIconRes;
-    case 'projects':
-      return projectsIconRes;
-    case 'about':
-      return aboutIconRes;
-    case 'contacts':
-      return contactsIconRes;
-    default:
-      return cvIconRes;
-  }
-};
-
-const getIconStyles = (size: number) => ({ type }: TStylesProps): AppInnerStyles => {
-  const iconRes = getIcon(type);
-
-  return {
-    width: `${size}px`,
-    height: `${size}px`,
-    display: 'block',
-    backgroundImage: `url(${iconRes})`,
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'contain',
-    backgroundPosition: 'center',
-  };
-};
-
 const styles: AppStyles = ({
   colors: {
     primary: { bgContent, greyUltralight },
   },
   sizes: {
     menu: {
-      buttonSize, buttonOffset, buttonIconSize,
+      buttonSize, buttonOffset,
     },
   },
 }) => {
@@ -81,7 +47,6 @@ const styles: AppStyles = ({
         },
       };
     },
-    icon: getIconStyles(buttonIconSize),
   };
 };
 
