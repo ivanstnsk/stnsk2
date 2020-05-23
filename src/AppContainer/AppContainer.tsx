@@ -4,9 +4,10 @@ import {
   Switch,
   Route,
 } from 'react-router-dom';
+import { Transition } from 'react-transition-group';
 
 import { Routes } from 'types';
-import { Menu } from 'components';
+import { Menu, TransitionScreenWrapper } from 'components';
 import {
   Home,
   About,
@@ -15,8 +16,19 @@ import {
   CV,
 } from 'screens';
 
+import { useStyles } from './styles';
+
+
+const routes = [
+  { path: Routes.ABOUT, Component: About },
+  { path: Routes.PROJECTS, Component: Projects },
+  { path: Routes.CONTACTS, Component: Contacts },
+  { path: Routes.CV, Component: CV },
+];
 
 export const AppContainer: React.FC<{}> = () => {
+  const classes = useStyles();
+
   return (
     <Router>
       <Switch>
@@ -25,20 +37,45 @@ export const AppContainer: React.FC<{}> = () => {
         </Route>
         <Route path="/">
           <Menu />
-          <Switch>
+          <div className={classes.page}>
+            {routes.map(({ path, Component }) => (
+              <Route
+                key={path}
+                exact
+                path={path}
+              >
+                {({ match }) => (
+                  <Transition
+                    in={match != null}
+                    timeout={600}
+                    unmountOnExit
+                  >
+                    {(state) => {
+                      return (
+                        <TransitionScreenWrapper transitionState={state}>
+                          <Component />
+                        </TransitionScreenWrapper>
+                      );
+                    }}
+                  </Transition>
+                )}
+              </Route>
+            ))}
+          </div>
+          {/* <Switch>
             <Route path={Routes.ABOUT}>
-              <About />
+              <About transitionState="entered" />
             </Route>
             <Route path={Routes.PROJECTS}>
-              <Projects />
+              <Projects transitionState="entered" />
             </Route>
             <Route path={Routes.CONTACTS}>
-              <Contacts />
+              <Contacts transitionState="entered" />
             </Route>
             <Route path={Routes.CV}>
-              <CV />
+              <CV transitionState="entered" />
             </Route>
-          </Switch>
+          </Switch> */}
         </Route>
       </Switch>
     </Router>

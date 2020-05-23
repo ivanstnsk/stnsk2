@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 
-import { Fallback } from 'components';
 import { useModule } from 'hooks';
+import { Fallback } from 'components';
 
 
 export const AboutContainer: React.FC<{}> = () => {

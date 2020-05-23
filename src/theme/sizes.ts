@@ -3,7 +3,8 @@ import { TSizes } from 'types/sizes';
 
 export const sizes: TSizes = {
   content: {
-    offset: 100,
+    offsetHorizontal: 100,
+    offsetTop: 40,
   },
   buttons: {
     mainCircleButtonSize: 134,

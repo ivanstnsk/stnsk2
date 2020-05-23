@@ -1,4 +1,4 @@
-import { AppStyles } from 'types/style';
+import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
 import cvIconRes from 'assets/icons/cv-icon.svg';
@@ -9,7 +9,7 @@ import contactsIconRes from 'assets/icons/contacts-icon.svg';
 import { TButtonType } from './types';
 
 
-type MenuButtonStylesProps = {
+type TStylesProps = {
   type: TButtonType;
   active: boolean;
 };
@@ -29,12 +29,12 @@ const getIcon = (type: TButtonType): string => {
   }
 };
 
-const getIconStyles = (size: number) => ({ type }: MenuButtonStylesProps): TStyles => {
+const getIconStyles = (size: number) => ({ type }: TStylesProps): AppInnerStyles => {
   const iconRes = getIcon(type);
 
   return {
-    width: size,
-    height: size,
+    width: `${size}px`,
+    height: `${size}px`,
     display: 'block',
     backgroundImage: `url(${iconRes})`,
     backgroundRepeat: 'no-repeat',
@@ -54,7 +54,7 @@ const styles: AppStyles = ({
   },
 }) => {
   return {
-    button: ({ active }: MenuButtonStylesProps) => {
+    button: ({ active }: TStylesProps) => {
       return {
         display: 'flex',
         justifyContent: 'center',
@@ -85,6 +85,4 @@ const styles: AppStyles = ({
   };
 };
 
-type TStyles = Record<string, any>;
-
-export const useStyles = (props: MenuButtonStylesProps): TStyles => useTStyles(styles, props);
+export const useStyles = (props: TStylesProps): AppInnerStyles => useTStyles(styles, props);

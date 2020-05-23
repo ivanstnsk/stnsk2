@@ -1,4 +1,4 @@
-import { AppStyles } from 'types/style';
+import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
 const styles: AppStyles = ({ colors: { primary: { greenMedium } } }) => {
@@ -25,9 +25,6 @@ const styles: AppStyles = ({ colors: { primary: { greenMedium } } }) => {
       minHeight: 50,
       height: 50,
       border: 'none',
-      // borderWidth: 2.5,
-      // borderStyle: 'solid',
-      // borderColor: greenMedium,
       borderRadius: 25,
       padding: 0,
       color: greenMedium,
@@ -64,6 +61,4 @@ const styles: AppStyles = ({ colors: { primary: { greenMedium } } }) => {
   };
 };
 
-type TStyles = Record<string, any>;
-
-export const useStyles = (): TStyles => useTStyles(styles);
+export const useStyles = (): AppInnerStyles => useTStyles(styles);

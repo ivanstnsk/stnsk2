@@ -1,4 +1,4 @@
-import { AppStyles } from 'types/style';
+import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
 const styles: AppStyles = ({
@@ -7,18 +7,11 @@ const styles: AppStyles = ({
       bg, bgContent, greyUltralight, greenMedium,
     },
   },
+  sizes: {
+    content: { offsetHorizontal, offsetTop },
+  },
 }) => {
   return {
-    '@keyframes show': {
-      from: {
-        opacity: 0,
-        transform: 'translateY(50px)',
-      },
-      to: {
-        opacity: 1,
-        transform: 'translateY(0px)',
-      },
-    },
     container: {
       width: '100%',
       height: '100%',
@@ -35,10 +28,9 @@ const styles: AppStyles = ({
       alignItems: 'stretch',
       backgroundColor: bgContent,
       margin: 0,
-      paddingTop: 40,
-      paddingLeft: 60,
-      paddignRight: 60,
-      animation: '$show 1s ease',
+      paddingTop: offsetTop,
+      paddingLeft: offsetHorizontal,
+      paddignRight: offsetHorizontal,
     },
     title: {
       color: greenMedium,
@@ -55,6 +47,4 @@ const styles: AppStyles = ({
   };
 };
 
-type TStyles = Record<string, any>;
-
-export const useStyles = (): TStyles => useTStyles(styles);
+export const useStyles = (): AppInnerStyles => useTStyles(styles);

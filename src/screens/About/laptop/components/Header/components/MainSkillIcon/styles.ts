@@ -1,8 +1,8 @@
-import { AppStyles } from 'types/style';
+import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
 
-type MainSkillIconStylesProps = {
+type TStylesProps = {
   active: boolean;
 };
 
@@ -15,13 +15,13 @@ const styles: AppStyles = (
   },
 ) => {
   return {
-    container: ({ active }: MainSkillIconStylesProps) => ({
+    container: ({ active }: TStylesProps) => ({
       marginLeft: 40,
       position: 'relative',
       transform: `translateY(${active ? -10 : 0}px)`,
       transition: 'transform 0.4s ease',
     }),
-    tooltip: ({ active }: MainSkillIconStylesProps) => ({
+    tooltip: ({ active }: TStylesProps) => ({
       position: 'absolute',
       left: -30,
       top: 80,
@@ -54,6 +54,4 @@ const styles: AppStyles = (
   };
 };
 
-type TStyles = Record<string, any>;
-
-export const useStyles = (props: MainSkillIconStylesProps): TStyles => useTStyles(styles, props);
+export const useStyles = (props: TStylesProps): AppInnerStyles => useTStyles(styles, props);

@@ -1,6 +1,7 @@
 export type TSizes = {
   content: {
-    offset: number;
+    offsetHorizontal: number;
+    offsetTop: number;
   };
   buttons: {
     mainCircleButtonSize: number;
