@@ -1,21 +1,27 @@
 import React from 'react';
-import {useModule} from 'hooks';
-import {Mobile} from 'Mobile';
-import {Tablet} from 'Tablet';
-import {Laptop} from 'Laptop';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+
+import {
+  Home,
+  About,
+} from 'screens';
 
 
 export const AppContainer: React.FC<{}> = () => {
-  const module = useModule();
-
-  switch (module) {
-    case 'mobile':
-      return <Mobile />;
-    case 'tablet':
-      return <Tablet />;
-    case 'laptop':
-      return <Laptop />;
-    default:
-      return <Laptop />;
-  }
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+      </Switch>
+    </Router>
+  );
 };
