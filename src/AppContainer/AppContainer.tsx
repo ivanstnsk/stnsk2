@@ -12,6 +12,7 @@ import {
   About,
   Projects,
   Contacts,
+  CV,
 } from 'screens';
 
 
@@ -33,6 +34,9 @@ export const AppContainer: React.FC<{}> = () => {
             </Route>
             <Route path={Routes.CONTACTS}>
               <Contacts />
+            </Route>
+            <Route path={Routes.CV}>
+              <CV />
             </Route>
           </Switch>
         </Route>
