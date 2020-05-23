@@ -60,7 +60,8 @@ module.exports = {
       },
     ],
     'arrow-body-style': [0, 'as-needed'],
-    'object-curly-spacing': [2, 'never'],
+    'object-curly-spacing': [2, 'always'],
+    'object-curly-newline': [0, 'as-needed'],
     'arrow-parens': [2, 'always'],
   },
   settings: {
