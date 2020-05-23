@@ -25,8 +25,6 @@ const styles: AppStyles = ({
       display: 'flex',
       flex: 1,
       backgroundColor: bg,
-      paddingLeft: 16,
-      paddingRight: 16,
       overflow: 'hidden',
     },
     content: {

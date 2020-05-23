@@ -27,5 +27,10 @@ export const theme: AppTheme = {
     buttons: {
       mainCircleButtonSize: LAPTOP_MAIN_CIRCLE_BUTTON_SIZE,
     },
+    menu: {
+      buttonSize: 80,
+      buttonIconSize: 30,
+      buttonOffset: 15,
+    },
   },
 };

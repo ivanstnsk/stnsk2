@@ -6,12 +6,14 @@ const styles: AppStyles = ({colors: {primary: {bg}}}) => {
     container: {
       display: 'flex',
       width: 120,
+      minWidth: 120,
       height: '100%',
       overflow: 'hidden',
       flexDirection: 'column',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       backgroundColor: bg,
+      paddingTop: 180,
     },
   };
 };

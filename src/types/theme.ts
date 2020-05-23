@@ -25,5 +25,10 @@ export interface AppTheme extends DefaultTheme {
     buttons: {
       mainCircleButtonSize: number;
     };
+    menu: {
+      buttonSize: number;
+      buttonIconSize: number;
+      buttonOffset: number;
+    };
   };
 }
