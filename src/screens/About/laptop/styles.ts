@@ -8,6 +8,9 @@ const styles: AppStyles = ({
       bg, bgContent, greyUltralight,
     },
   },
+  sizes: {
+    content: { offset },
+  },
 }) => {
   return {
     '@keyframes show': {
@@ -37,8 +40,8 @@ const styles: AppStyles = ({
       backgroundColor: bgContent,
       margin: 0,
       paddingTop: 40,
-      paddingLeft: 60,
-      paddingRight: 60,
+      paddingLeft: offset,
+      paddingRight: offset,
       animation: '$show 1s ease',
     },
     colsContainer: {

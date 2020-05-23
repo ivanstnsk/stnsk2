@@ -1,5 +1,6 @@
 import { DefaultTheme } from 'react-jss';
 import { EColors } from 'theme/colors';
+import { TSizes } from './sizes';
 
 
 export interface AppTheme extends DefaultTheme {
@@ -22,14 +23,5 @@ export interface AppTheme extends DefaultTheme {
   gradients: {
     bg: string;
   };
-  sizes: {
-    buttons: {
-      mainCircleButtonSize: number;
-    };
-    menu: {
-      buttonSize: number;
-      buttonIconSize: number;
-      buttonOffset: number;
-    };
-  };
+  sizes: TSizes;
 }

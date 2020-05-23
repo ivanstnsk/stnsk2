@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 
-import { LAPTOP_MAIN_CIRCLE_BUTTON_SIZE } from 'constants/sizes';
 import { SequenceAnimation } from 'utils';
 
 import { MainCircleButton } from '../MainCircleButton';
@@ -12,6 +11,8 @@ type TCircleButtonsLayoutProps = {
   showMode?: boolean;
   onButtonClick?: (buttonId: string) => void;
 };
+
+const LAPTOP_MAIN_CIRCLE_BUTTON_SIZE = 134;
 
 const ANCHORS = [
   [420, -LAPTOP_MAIN_CIRCLE_BUTTON_SIZE / 2],

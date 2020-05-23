@@ -1,7 +1,5 @@
 import React, { memo, useCallback } from 'react';
 
-import { LAPTOP_MAIN_CIRCLE_BUTTON_SIZE } from 'constants/sizes';
-
 import { useStyles } from './styles';
 import { TButtonType } from './types';
 
@@ -12,6 +10,8 @@ type TMainCircleButton = {
   label: string;
   onClick?: (id: string) => void;
 };
+
+const LAPTOP_MAIN_CIRCLE_BUTTON_SIZE = 134;
 
 const MainCircleButtonComp: React.FC<TMainCircleButton> = ({
   innerRef,
