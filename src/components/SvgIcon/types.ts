@@ -2,7 +2,8 @@ export type TSvgIconType =
 | 'cv'
 | 'about'
 | 'projects'
-| 'contacts';
+| 'contacts'
+| 'logo';
 
 export interface SvgIconInnerProps {
   color: string;

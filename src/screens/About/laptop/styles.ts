@@ -12,7 +12,7 @@ const styles: AppStyles = ({
     '@keyframes show': {
       from: {
         opacity: 0,
-        transform: 'translateY(100px)',
+        transform: 'translateY(50px)',
       },
       to: {
         opacity: 1,
@@ -38,7 +38,7 @@ const styles: AppStyles = ({
       paddingTop: 40,
       paddingLeft: 60,
       paddignRight: 60,
-      animation: '$show 0.4s linear',
+      animation: '$show 1s ease',
     },
     title: {
       color: greenMedium,

@@ -2,6 +2,7 @@ import React, { memo, useCallback } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 
 import { Routes } from 'types';
+import { SvgIcon } from '../SvgIcon';
 
 import { MenuButton } from './components';
 import { useStyles } from './styles';
@@ -22,26 +23,36 @@ const MenuComp: React.FC<{}> = () => {
 
   return (
     <div className={classes.container}>
-      <MenuButton
-        type="projects"
-        onClick={getNavigatorHandler(Routes.PROJECTS)}
-        active={isButtonActive(location.pathname, 'projects')}
-      />
-      <MenuButton
-        type="about"
-        onClick={getNavigatorHandler(Routes.ABOUT)}
-        active={isButtonActive(location.pathname, 'about')}
-      />
-      <MenuButton
-        type="cv"
-        onClick={getNavigatorHandler(Routes.CV)}
-        active={isButtonActive(location.pathname, 'cv')}
-      />
-      <MenuButton
-        type="contacts"
-        onClick={getNavigatorHandler(Routes.CONTACTS)}
-        active={isButtonActive(location.pathname, 'contacts')}
-      />
+      <div className={classes.header}>
+        <SvgIcon
+          type="logo"
+          color="rgba(255,255,255,0.6)"
+          width={60}
+          height={60}
+        />
+      </div>
+      <ul className={classes.buttons}>
+        <MenuButton
+          type="projects"
+          onClick={getNavigatorHandler(Routes.PROJECTS)}
+          active={isButtonActive(location.pathname, 'projects')}
+        />
+        <MenuButton
+          type="about"
+          onClick={getNavigatorHandler(Routes.ABOUT)}
+          active={isButtonActive(location.pathname, 'about')}
+        />
+        <MenuButton
+          type="cv"
+          onClick={getNavigatorHandler(Routes.CV)}
+          active={isButtonActive(location.pathname, 'cv')}
+        />
+        <MenuButton
+          type="contacts"
+          onClick={getNavigatorHandler(Routes.CONTACTS)}
+          active={isButtonActive(location.pathname, 'contacts')}
+        />
+      </ul>
     </div>
   );
 };

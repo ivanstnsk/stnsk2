@@ -14,7 +14,26 @@ const styles: AppStyles = ({ colors: { primary: { bg } } }) => {
       alignItems: 'center',
       justifyContent: 'flex-start',
       backgroundColor: bg,
-      paddingTop: 180,
+    },
+    header: {
+      display: 'flex',
+      flex: 1,
+      width: '100%',
+      minHeight: 100,
+      maxHeight: 180,
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      paddingTop: 40,
+    },
+    buttons: {
+      display: 'flex',
+      flex: 1,
+      width: '100%',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      padding: 0,
     },
   };
 };

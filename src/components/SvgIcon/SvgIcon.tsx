@@ -5,6 +5,7 @@ import {
   ProjectsIcon,
   AboutIcon,
   ContactsIcon,
+  LogoIcon,
 } from './icons';
 import { TSvgIconType, SvgIconInnerProps } from './types';
 
@@ -19,6 +20,7 @@ const getIcon = (type: TSvgIconType): React.FC<SvgIconInnerProps> => {
     case 'projects': return ProjectsIcon;
     case 'about': return AboutIcon;
     case 'contacts': return ContactsIcon;
+    case 'logo': return LogoIcon;
     default: return CVIcon;
   }
 };
