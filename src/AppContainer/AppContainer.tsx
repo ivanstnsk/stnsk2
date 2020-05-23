@@ -8,6 +8,7 @@ import {
 import {
   Home,
   About,
+  Projects,
 } from 'screens';
 
 
@@ -20,6 +21,9 @@ export const AppContainer: React.FC<{}> = () => {
         </Route>
         <Route path="/about">
           <About />
+        </Route>
+        <Route path="/projects">
+          <Projects />
         </Route>
       </Switch>
     </Router>
