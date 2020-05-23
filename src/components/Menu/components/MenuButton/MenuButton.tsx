@@ -1,21 +1,28 @@
-import React, {memo, useCallback} from 'react';
+import React, { memo, useCallback } from 'react';
 
-import {useStyles} from './styles';
-import {TButtonType} from './types';
+import { SvgIcon } from '../../../SvgIcon';
+
+import { useStyles } from './styles';
+import { TButtonType } from './types';
 
 
 interface MenuButtonProps {
   innerRef?: React.RefObject<HTMLButtonElement>;
   type: TButtonType;
+  active?: boolean;
   onClick?: (id: string) => void;
 }
 
 const MenuButtonComp: React.FC<MenuButtonProps> = ({
   innerRef,
   type,
+  active = false,
   onClick,
 }) => {
-  const classes = useStyles({type});
+  const classes = useStyles({ type, active });
+  const iconColor = active
+    ? '#81AF65'
+    : 'rgba(255,255,255,0.6)';
 
   const handleClick = useCallback(() => {
     if (onClick) {
@@ -29,7 +36,12 @@ const MenuButtonComp: React.FC<MenuButtonProps> = ({
       onClick={handleClick}
       ref={innerRef}
     >
-      <div className={classes.icon} />
+      <SvgIcon
+        type={type}
+        color={iconColor}
+        width={30}
+        height={30}
+      />
     </button>
   );
 };

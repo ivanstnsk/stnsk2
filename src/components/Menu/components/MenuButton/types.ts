@@ -1,5 +1,5 @@
 export type TButtonType =
 | 'cv'
-| 'skills'
+| 'about'
 | 'projects'
 | 'contacts';
