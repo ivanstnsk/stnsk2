@@ -9,6 +9,8 @@ module.exports = {
     fetch: true,
     Response: true,
     window: true,
+    document: true,
+    navigator: true,
   },
   env: {
     jest: true,
@@ -52,7 +54,16 @@ module.exports = {
     'react/prop-types': 0,
     'import/no-default-export': 2,
     'import/prefer-default-export': 0,
-    'import/extensions': [2, 'never'],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     'class-methods-use-this': [
       2,
       {

@@ -1,7 +1,7 @@
-import {AppTheme} from 'types/theme';
-import {LAPTOP_MAIN_CIRCLE_BUTTON_SIZE} from 'constants/sizes';
+import { AppTheme } from 'types/theme';
+import { LAPTOP_MAIN_CIRCLE_BUTTON_SIZE } from 'constants/sizes';
 
-import {EColors} from './colors';
+import { EColors } from './colors';
 
 
 export const theme: AppTheme = {

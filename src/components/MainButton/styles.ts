@@ -1,11 +1,11 @@
-import {AppStyles} from 'types/style';
-import {useTStyles} from 'hooks';
+import { AppStyles } from 'types/style';
+import { useTStyles } from 'hooks';
 
-const styles: AppStyles = ({colors: {primary: {greenMedium}}}) => {
+const styles: AppStyles = ({ colors: { primary: { greenMedium } } }) => {
   return {
     '@keyframes dash': {
-      from: {strokeDashoffset: 0},
-      to: {strokeDashoffset: 24},
+      from: { strokeDashoffset: 0 },
+      to: { strokeDashoffset: 24 },
     },
     '@keyframes push': {
       from: {

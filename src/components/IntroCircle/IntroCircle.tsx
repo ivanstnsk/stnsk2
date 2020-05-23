@@ -2,11 +2,11 @@ import React, {
   useRef, RefObject, useCallback, useEffect,
 } from 'react';
 
-import {useMouseMove} from 'hooks';
-import {interpolate, getDistance, SequenceAnimation} from 'utils';
+import { useMouseMove } from 'hooks';
+import { interpolate, getDistance, SequenceAnimation } from 'utils';
 
-import {MainButton} from '../MainButton';
-import {useStyles} from './styles';
+import { MainButton } from '../MainButton';
+import { useStyles } from './styles';
 import {
   TIntroCircleProps,
   TStylesApplier,

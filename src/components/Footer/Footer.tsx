@@ -2,7 +2,7 @@ import React from 'react';
 
 import metadata from 'metadata.json';
 
-import {useStyles} from './styles';
+import { useStyles } from './styles';
 
 
 export const Footer: React.FC<{}> = () => {

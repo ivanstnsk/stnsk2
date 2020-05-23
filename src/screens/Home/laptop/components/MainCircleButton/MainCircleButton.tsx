@@ -1,9 +1,9 @@
-import React, {memo, useCallback} from 'react';
+import React, { memo, useCallback } from 'react';
 
-import {LAPTOP_MAIN_CIRCLE_BUTTON_SIZE} from 'constants/sizes';
+import { LAPTOP_MAIN_CIRCLE_BUTTON_SIZE } from 'constants/sizes';
 
-import {useStyles} from './styles';
-import {TButtonType} from './types';
+import { useStyles } from './styles';
+import { TButtonType } from './types';
 
 
 type TMainCircleButton = {
@@ -19,7 +19,7 @@ const MainCircleButtonComp: React.FC<TMainCircleButton> = ({
   label,
   onClick,
 }) => {
-  const classes = useStyles({type});
+  const classes = useStyles({ type });
 
   const handleClick = useCallback(() => {
     if (onClick) {

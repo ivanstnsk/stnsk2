@@ -1,4 +1,4 @@
-import {AppTheme} from 'types/theme';
+import { AppTheme } from 'types/theme';
 
 export type AppStylesProps = Record<string, string | number | boolean>;
 

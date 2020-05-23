@@ -1,5 +1,5 @@
-import {AppStyles} from 'types/style';
-import {useTStyles} from 'hooks';
+import { AppStyles } from 'types/style';
+import { useTStyles } from 'hooks';
 
 
 // type LaptopStylesProps = {
@@ -7,7 +7,7 @@ import {useTStyles} from 'hooks';
 //   width: number;
 // };
 
-const styles: AppStyles = ({colors: {primary}}) => {
+const styles: AppStyles = ({ colors: { primary } }) => {
   return {
     // container: ({color, width}: LaptopStylesProps) => {
     container: () => {

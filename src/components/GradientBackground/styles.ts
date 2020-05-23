@@ -1,7 +1,7 @@
-import {AppStyles} from 'types/style';
-import {useTStyles} from 'hooks';
+import { AppStyles } from 'types/style';
+import { useTStyles } from 'hooks';
 
-const styles: AppStyles = ({gradients: {bg}}) => {
+const styles: AppStyles = ({ gradients: { bg } }) => {
   return {
     container: {
       position: 'relative',

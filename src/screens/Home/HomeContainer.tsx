@@ -1,8 +1,8 @@
-import React, {Suspense, useCallback} from 'react';
-import {useHistory} from 'react-router-dom';
+import React, { Suspense, useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
 
-import {Fallback} from 'components';
-import {useModule} from 'hooks';
+import { Fallback } from 'components';
+import { useModule } from 'hooks';
 
 
 export const HomeContainer: React.FC<{}> = () => {

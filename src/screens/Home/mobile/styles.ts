@@ -1,7 +1,7 @@
-import {AppStyles} from 'types/style';
-import {useTStyles} from 'hooks';
+import { AppStyles } from 'types/style';
+import { useTStyles } from 'hooks';
 
-const styles: AppStyles = ({colors: {primary: {bg, greyUltralight, greenMedium}}}) => {
+const styles: AppStyles = ({ colors: { primary: { bg, greyUltralight, greenMedium } } }) => {
   return {
     container: {
       width: '100%',
@@ -29,6 +29,6 @@ const styles: AppStyles = ({colors: {primary: {bg, greyUltralight, greenMedium}}
   };
 };
 
-type TStyles = Record<string, any>;
+type TStyles = Record<string, anying | number>;
 
 export const useStyles = (): TStyles => useTStyles(styles);

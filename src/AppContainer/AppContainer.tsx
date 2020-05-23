@@ -5,8 +5,8 @@ import {
   Route,
 } from 'react-router-dom';
 
-import {Routes} from 'types';
-import {Menu} from 'components';
+import { Routes } from 'types';
+import { Menu } from 'components';
 import {
   Home,
   About,

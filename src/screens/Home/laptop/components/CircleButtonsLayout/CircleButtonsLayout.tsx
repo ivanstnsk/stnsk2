@@ -1,11 +1,11 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useRef, useEffect } from 'react';
 
-import {LAPTOP_MAIN_CIRCLE_BUTTON_SIZE} from 'constants/sizes';
-import {SequenceAnimation} from 'utils';
+import { LAPTOP_MAIN_CIRCLE_BUTTON_SIZE } from 'constants/sizes';
+import { SequenceAnimation } from 'utils';
 
-import {MainCircleButton} from '../MainCircleButton';
+import { MainCircleButton } from '../MainCircleButton';
 
-import {useStyles} from './styles';
+import { useStyles } from './styles';
 
 
 type TCircleButtonsLayoutProps = {

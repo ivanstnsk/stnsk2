@@ -12,7 +12,7 @@ export const useMouseMove = (handlerId: string, handler: THandler, unregister = 
     }
   } else {
     const cbHandler = (event: MouseEvent): void => {
-      const {pageX, pageY} = event;
+      const { pageX, pageY } = event;
       handler(pageX, pageY);
     };
 

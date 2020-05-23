@@ -1,12 +1,12 @@
-import {AppStyles} from 'types/style';
-import {useTStyles} from 'hooks';
+import { AppStyles } from 'types/style';
+import { useTStyles } from 'hooks';
 
 import cvIconRes from 'assets/icons/cv-icon.svg';
 import projectsIconRes from 'assets/icons/projects-icon.svg';
 import skillsIconRes from 'assets/icons/skills-icon.svg';
 import contactsIconRes from 'assets/icons/contacts-icon.svg';
 
-import {TButtonType} from './types';
+import { TButtonType } from './types';
 
 
 type MainCircleButtonStylesProps = {
@@ -28,7 +28,7 @@ const getIcon = (type: TButtonType): string => {
   }
 };
 
-const getIconStyles = () => ({type}: MainCircleButtonStylesProps): TStyles => {
+const getIconStyles = () => ({ type }: MainCircleButtonStylesProps): TStyles => {
   const iconRes = getIcon(type);
 
   return {
@@ -44,16 +44,16 @@ const getIconStyles = () => ({type}: MainCircleButtonStylesProps): TStyles => {
 
 const styles: AppStyles = ({
   colors: {
-    primary: {bg, greyUltralight},
+    primary: { bg, greyUltralight },
   },
   sizes: {
-    buttons: {mainCircleButtonSize},
+    buttons: { mainCircleButtonSize },
   },
 }) => {
   return {
     '@keyframes dash': {
-      from: {strokeDashoffset: 0},
-      to: {strokeDashoffset: 24},
+      from: { strokeDashoffset: 0 },
+      to: { strokeDashoffset: 24 },
     },
     button: {
       position: 'absolute',

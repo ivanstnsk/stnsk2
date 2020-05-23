@@ -1,7 +1,7 @@
-import {AppStyles} from 'types/style';
-import {useTStyles} from 'hooks';
+import { AppStyles } from 'types/style';
+import { useTStyles } from 'hooks';
 
-const styles: AppStyles = ({colors: {primary: {greyUltraDark}}}) => {
+const styles: AppStyles = ({ colors: { primary: { greyUltraDark } } }) => {
   return {
     container: {
       position: 'absolute',

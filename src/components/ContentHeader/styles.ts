@@ -1,7 +1,7 @@
-import {AppStyles} from 'types/style';
-import {useTStyles} from 'hooks';
+import { AppStyles } from 'types/style';
+import { useTStyles } from 'hooks';
 
-const styles: AppStyles = ({colors: {typography: {title, subTitle}}}) => {
+const styles: AppStyles = ({ colors: { typography: { title, subTitle } } }) => {
   return {
     container: {
       display: 'flex',

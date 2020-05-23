@@ -1,9 +1,9 @@
-import React, {useCallback, useRef} from 'react';
+import React, { useCallback, useRef } from 'react';
 
-import {useMouseMove} from 'hooks';
-import {interpolate, getDistance} from 'utils';
+import { useMouseMove } from 'hooks';
+import { interpolate, getDistance } from 'utils';
 
-import {useStyles} from './styles';
+import { useStyles } from './styles';
 
 
 type TGradientBackgroundProps = {

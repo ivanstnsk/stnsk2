@@ -1,11 +1,11 @@
-import {AppStyles} from 'types/style';
-import {useTStyles} from 'hooks';
+import { AppStyles } from 'types/style';
+import { useTStyles } from 'hooks';
 import logoRes from 'assets/icons/logo.svg';
 
 
 const styles: AppStyles = ({
   colors: {
-    primary: {bg, greenMedium, greyUltralight},
+    primary: { bg, greenMedium, greyUltralight },
   },
 }) => {
   return {

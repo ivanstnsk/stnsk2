@@ -1,5 +1,5 @@
-import {DefaultTheme} from 'react-jss';
-import {EColors} from 'theme/colors';
+import { DefaultTheme } from 'react-jss';
+import { EColors } from 'theme/colors';
 
 
 export interface AppTheme extends DefaultTheme {

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {ContentHeader} from 'components';
+import { ContentHeader } from 'components';
 
-import {useStyles} from './styles';
+import { useStyles } from './styles';
 
 
 export const CV: React.FC<{}> = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {useStyles} from './styles';
+import { useStyles } from './styles';
 
 
 type TMainButtonProps = {
@@ -26,9 +26,9 @@ export const MainButton: React.FC<TMainButtonProps> = ({
         viewBox="0 0 200 50"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        stroke-dasharray="0"
+        strokeDasharray="0"
       >
-        <rect x="1.25" y="1.25" width="197.5" height="47.5" rx="23.75" stroke="#81AF65" stroke-width="2.5"/>
+        <rect x="1.25" y="1.25" width="197.5" height="47.5" rx="23.75" stroke="#81AF65" strokeWidth="2.5"/>
       </svg>
 
       {children}

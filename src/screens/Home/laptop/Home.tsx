@@ -1,9 +1,9 @@
-import React, {useState, useCallback} from 'react';
+import React, { useState, useCallback } from 'react';
 
-import {IntroCircle, GradientBackground, Footer} from 'components';
+import { IntroCircle, GradientBackground, Footer } from 'components';
 
-import {CircleButtonsLayout} from './components';
-import {useStyles} from './styles';
+import { CircleButtonsLayout } from './components';
+import { useStyles } from './styles';
 
 
 interface HomeProps {
