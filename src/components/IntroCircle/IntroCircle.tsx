@@ -1,5 +1,5 @@
 import React, {
-  useRef, RefObject, useCallback, useEffect,
+  useRef, useCallback, useEffect,
 } from 'react';
 
 import { useMouseMove } from 'hooks';

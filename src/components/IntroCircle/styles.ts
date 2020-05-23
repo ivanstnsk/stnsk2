@@ -1,4 +1,4 @@
-import { AppStyles } from 'types/style';
+import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 import logoRes from 'assets/icons/logo.svg';
 
@@ -18,11 +18,6 @@ const styles: AppStyles = ({
       borderRadius: '50%',
       backgroundColor: bg,
       transition: 'transform 1s ease',
-
-      // '&:hover': {
-      //   transform: 'scaleX(1.1) scaleY(1.1)',
-      //   transition: 'transform 1s ease',
-      // },
     },
     circleBg: {
       position: 'absolute',
@@ -80,6 +75,4 @@ const styles: AppStyles = ({
   };
 };
 
-type TStyles = Record<string, any>;
-
-export const useStyles = (): TStyles => useTStyles(styles);
+export const useStyles = (): AppInnerStyles => useTStyles(styles);
