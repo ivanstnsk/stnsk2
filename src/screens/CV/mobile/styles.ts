@@ -29,6 +29,6 @@ const styles: AppStyles = ({ colors: { primary: { bg, greyUltralight, greenMediu
   };
 };
 
-type TStyles = Record<string, anying | number>;
+type TStyles = Record<string, any | number>;
 
 export const useStyles = (): TStyles => useTStyles(styles);
