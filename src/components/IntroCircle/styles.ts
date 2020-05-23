@@ -19,10 +19,10 @@ const styles: AppStyles = ({
       backgroundColor: bg,
       transition: 'transform 1s ease',
 
-      '&:hover': {
-        transform: 'scaleX(1.1) scaleY(1.1)',
-        transition: 'transform 1s ease',
-      },
+      // '&:hover': {
+      //   transform: 'scaleX(1.1) scaleY(1.1)',
+      //   transition: 'transform 1s ease',
+      // },
     },
     circleBg: {
       position: 'absolute',
@@ -33,7 +33,7 @@ const styles: AppStyles = ({
       filter: 'drop-shadow(0px 0px 25px rgba(0, 0, 0, 0.3))',
       animationFillMode: 'forwards',
       transition: 'width 1.6s height 1.6s ease',
-      opacity: 0,
+      opacity: 1,
     },
     content: {
       position: 'absolute',

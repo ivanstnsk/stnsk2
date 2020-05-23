@@ -77,12 +77,10 @@ const applyContainerStyles = (nodeRef: React.RefObject<HTMLDivElement>, show: bo
   if (show) {
     if (nodeRef.current) {
       new SequenceAnimation<HTMLDivElement>(nodeRef)
-        .style('opacity', '1')
-        .style('transition', 'opacity 0.4s')
-        .delay(400)
+        .delay(600)
         .style('width', '568px')
         .style('height', '568px')
-        .style('transition', 'all 1s')
+        .style('transition', 'all 1s ease')
         .apply();
     }
   } else {
@@ -94,9 +92,6 @@ const applyContainerStyles = (nodeRef: React.RefObject<HTMLDivElement>, show: bo
         .style('width', `${size}px`)
         .style('height', `${size}px`)
         .style('transition', 'all 1s')
-        .delay(1000)
-        .style('opacity', '0')
-        .style('transition', 'opacity 0.4s')
         .apply();
     }
   }
@@ -111,13 +106,15 @@ export const IntroCircle: React.FC<TIntroCircleProps> = ({
   const contentRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = useCallback((xm: number, ym: number) => {
-    const applyFollowStyles = getFollowStylesApplier(xm, ym);
+    if (showMode) {
+      const applyFollowStyles = getFollowStylesApplier(xm, ym);
 
-    if (applyFollowStyles) {
-      applyFollowStyles(containerRef, 0);
-      applyFollowStyles(contentRef, 1);
+      if (applyFollowStyles) {
+        applyFollowStyles(containerRef, 0);
+        applyFollowStyles(contentRef, 1);
+      }
     }
-  }, []);
+  }, [showMode]);
 
   useMouseMove(id, handleMouseMove);
 
