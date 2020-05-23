@@ -5,9 +5,10 @@ const styles: AppStyles = ({colors: {primary: {bg}}}) => {
   return {
     container: {
       display: 'flex',
+      flex: 1,
       width: 120,
       minWidth: 120,
-      height: '100%',
+      maxWidth: 120,
       overflow: 'hidden',
       flexDirection: 'column',
       alignItems: 'center',
