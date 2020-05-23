@@ -6,10 +6,16 @@ export interface AppTheme extends DefaultTheme {
   colors: {
     primary: {
       bg: EColors;
+      bgContent: EColors;
       circleBg: EColors;
       greenMedium: string;
       greyUltralight: string;
       greyUltraDark: string;
+    };
+    typography: {
+      title: EColors;
+      subTitle: EColors;
+      text: EColors;
     };
   };
   gradients: {
