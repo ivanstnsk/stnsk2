@@ -1,10 +1,11 @@
 import { AppStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
+
 const styles: AppStyles = ({
   colors: {
     primary: {
-      bg, bgContent, greyUltralight, greenMedium,
+      bg, bgContent, greyUltralight,
     },
   },
 }) => {
@@ -37,20 +38,26 @@ const styles: AppStyles = ({
       margin: 0,
       paddingTop: 40,
       paddingLeft: 60,
-      paddignRight: 60,
+      paddingRight: 60,
       animation: '$show 1s ease',
     },
-    title: {
-      color: greenMedium,
-      fontSize: 50,
-      fontWeight: 500,
-      marginBottom: 16,
+    colsContainer: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'flex-start',
+      justifyContent: 'flex-start',
+      marginTop: 70,
     },
-    text: {
-      color: greyUltralight,
+    colText: {
+      display: 'flex',
+      flex: 1,
       fontSize: 18,
       fontWeight: 300,
-      fontStyle: 'normal',
+      lineHeight: '22px',
+      color: greyUltralight,
+    },
+    colRight: {
+      marginLeft: 60,
     },
   };
 };

@@ -9,15 +9,16 @@ export const theme: AppTheme = {
     primary: {
       bg: EColors.ULTRA_DARK_BLUE,
       bgContent: EColors.DARK_BLUE,
+      bgInfo: EColors.LIGHT_GREY,
       circleBg: EColors.DARK_BLUE,
       greenMedium: '#81AF65',
       greyUltralight: 'rgba(255,255,255,0.6)',
       greyUltraDark: 'rgba(255,255,255,0.1)',
     },
     typography: {
-      title: EColors.LIGHT_GREY,
-      subTitle: EColors.LIGHT_GREY,
-      text: EColors.LIGHT_GREY,
+      title: EColors.GREY,
+      subTitle: EColors.GREY,
+      text: EColors.GREY,
     },
   },
   gradients: {

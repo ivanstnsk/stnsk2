@@ -3,7 +3,11 @@ export type TSvgIconType =
 | 'about'
 | 'projects'
 | 'contacts'
-| 'logo';
+| 'logo'
+| 'web'
+| 'mobile'
+| 'design'
+| 'backend';
 
 export interface SvgIconInnerProps {
   color: string;

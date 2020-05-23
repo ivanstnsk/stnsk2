@@ -7,6 +7,7 @@ export interface AppTheme extends DefaultTheme {
     primary: {
       bg: EColors;
       bgContent: EColors;
+      bgInfo: EColors;
       circleBg: EColors;
       greenMedium: string;
       greyUltralight: string;
