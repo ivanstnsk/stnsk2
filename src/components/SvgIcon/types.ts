@@ -7,7 +7,12 @@ export type TSvgIconType =
 | 'web'
 | 'mobile'
 | 'design'
-| 'backend';
+| 'backend'
+| 'mail'
+| 'skype'
+| 'github'
+| 'instagram'
+| 'linkedin';
 
 export interface SvgIconInnerProps {
   color: string;
