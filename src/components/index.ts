@@ -7,3 +7,4 @@ export { ContentHeader } from './ContentHeader';
 export { Menu } from './Menu';
 export { SvgIcon } from './SvgIcon';
 export { TransitionScreenWrapper } from './TransitionScreenWrapper';
+export { SectionTitle } from './SectionTitle';
