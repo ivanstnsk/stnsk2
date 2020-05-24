@@ -1,7 +1,12 @@
 import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
-const styles: AppStyles = ({ colors: { primary: { bg } } }) => {
+
+type TStylesProps = {
+  activeButtonPosition: number;
+};
+
+const styles: AppStyles = ({ colors: { primary: { bg, greenMedium } } }) => {
   return {
     container: {
       display: 'flex',
@@ -35,7 +40,26 @@ const styles: AppStyles = ({ colors: { primary: { bg } } }) => {
       justifyContent: 'flex-start',
       padding: 0,
     },
+    buttonsInner: {
+      display: 'flex',
+      width: '100%',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      position: 'relative',
+    },
+    tick: ({ activeButtonPosition }: TStylesProps) => ({
+      width: 5,
+      height: 96,
+      borderTopRightRadius: 4,
+      borderBottomRightRadius: 4,
+      backgroundColor: greenMedium,
+      position: 'absolute',
+      left: 0,
+      top: activeButtonPosition * 110 + 6,
+      transition: 'all 0.4s ease',
+    }),
   };
 };
 
-export const useStyles = (): AppInnerStyles => useTStyles(styles);
+export const useStyles = (props: TStylesProps): AppInnerStyles => useTStyles(styles, props);
