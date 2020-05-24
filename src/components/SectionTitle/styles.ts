@@ -9,6 +9,7 @@ const styles: AppStyles = ({ colors: { typography: { title } } }) => {
       fontWeight: 'normal',
       lineHeight: '42px',
       color: title,
+      marginBottom: 50,
     },
   };
 };
