@@ -10,3 +10,4 @@ export { TransitionScreenWrapper } from './TransitionScreenWrapper';
 export { SectionTitle } from './SectionTitle';
 export { Button} from './Button';
 export { ScrollContent } from './ScrollContent';
+export { ContentContainer } from './ContentContainer';
