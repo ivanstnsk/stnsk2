@@ -22,8 +22,10 @@ export const TransitionScreenWrapper: React.FC<TransitionScreenWrapperProps> = (
   const classes = useStyles({ transitionState });
 
   return (
-    <div className={classes.container}>
-      {children}
+    <div className={classes.wrapper}>
+      <div className={classes.container}>
+        {children}
+      </div>
     </div>
   );
 };
