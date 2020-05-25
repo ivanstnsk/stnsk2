@@ -16,7 +16,7 @@ export const About: React.FC<{}> = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
+    <>
       <ContentHeader
         title="About me"
         subTitle="Everything about my skills"
@@ -46,6 +46,6 @@ export const About: React.FC<{}> = () => {
           </div>
         </ContentContainer>
       </ScrollContent>
-    </div>
+    </>
   );
 };
