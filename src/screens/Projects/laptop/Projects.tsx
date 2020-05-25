@@ -4,6 +4,7 @@ import {
   ContentHeader,
   ScrollContent,
   ContentContainer,
+  NoPage,
 } from 'components';
 
 // import { useStyles } from './styles';
@@ -20,7 +21,7 @@ export const Projects: React.FC<{}> = () => {
       />
       <ScrollContent>
         <ContentContainer>
-          <div>to be updated</div>
+          <NoPage />
         </ContentContainer>
       </ScrollContent>
     </>
