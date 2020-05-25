@@ -1,6 +1,10 @@
 import React from 'react';
 
-import { ContentHeader, ScrollContent } from 'components';
+import {
+  ContentHeader,
+  ScrollContent,
+  ContentContainer,
+} from 'components';
 
 import {
   Header,
@@ -18,7 +22,7 @@ export const About: React.FC<{}> = () => {
         subTitle="Everything about my skills"
       />
       <ScrollContent>
-        <div className={classes.content}>
+        <ContentContainer>
           <Header />
           <div className={classes.colsContainer}>
             <div className={classes.colText}>
@@ -40,7 +44,7 @@ export const About: React.FC<{}> = () => {
             Also interested in backend and game development & gamification.
           </div>
           </div>
-        </div>
+        </ContentContainer>
       </ScrollContent>
     </div>
   );
