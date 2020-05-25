@@ -1,21 +1,29 @@
 import React from 'react';
 
-import { ContentHeader } from 'components';
+import {
+  ContentHeader,
+  ScrollContent,
+  ContentContainer,
+  NoPage,
+} from 'components';
 
-import { useStyles } from './styles';
+// import { useStyles } from './styles';
 
 
 export const CV: React.FC<{}> = () => {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
-    <div className={classes.container}>
-      <div className={classes.content}>
-        <ContentHeader
-          title="CV"
-          subTitle="You can download my CV here"
-        />
-      </div>
-    </div>
+    <>
+      <ContentHeader
+        title="CV"
+        subTitle="You can download my CV here"
+      />
+      <ScrollContent>
+        <ContentContainer>
+          <NoPage />
+        </ContentContainer>
+      </ScrollContent>
+    </>
   );
 };
