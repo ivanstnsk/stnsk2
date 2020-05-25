@@ -3,4 +3,5 @@ export enum EColors {
   DARK_BLUE = '#1F2124',
   GREY = 'rgba(255,255,255,0.6)',
   LIGHT_GREY = '#26292C',
+  DARK_GREY = 'rgba(255,255,255,0.05)',
 }

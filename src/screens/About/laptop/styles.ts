@@ -5,11 +5,11 @@ import { useTStyles } from 'hooks';
 const styles: AppStyles = ({
   colors: {
     primary: {
-      bg, bgContent, greyUltralight,
+      bgContent, greyUltralight,
     },
   },
   sizes: {
-    content: { offsetHorizontal, offsetTop },
+    content: { offsetHorizontal, offsetTop, offsetBottom },
   },
 }) => {
   return {
@@ -19,7 +19,10 @@ const styles: AppStyles = ({
       height: '100%',
       display: 'flex',
       flex: 1,
-      backgroundColor: bg,
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'stretch',
+      backgroundColor: bgContent,
       overflow: 'hidden',
     },
     content: {
@@ -28,9 +31,8 @@ const styles: AppStyles = ({
       flexDirection: 'column',
       justifyContent: 'flex-start',
       alignItems: 'stretch',
-      backgroundColor: bgContent,
-      margin: 0,
       paddingTop: offsetTop,
+      paddingBottom: offsetBottom,
       paddingLeft: offsetHorizontal,
       paddignRight: offsetHorizontal,
     },

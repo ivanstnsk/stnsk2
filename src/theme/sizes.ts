@@ -5,6 +5,11 @@ export const sizes: TSizes = {
   content: {
     offsetHorizontal: 100,
     offsetTop: 40,
+    offsetBottom: 40,
+  },
+  page: {
+    offsetTop: 40,
+    offsetBottom: 0,
   },
   buttons: {
     mainCircleButtonSize: 134,

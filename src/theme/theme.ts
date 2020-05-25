@@ -11,6 +11,7 @@ export const theme: AppTheme = {
       bgContent: EColors.DARK_BLUE,
       bgInfo: EColors.LIGHT_GREY,
       circleBg: EColors.DARK_BLUE,
+      underline: EColors.DARK_GREY,
       greenMedium: '#81AF65',
       greyUltralight: 'rgba(255,255,255,0.6)',
       greyUltraDark: 'rgba(255,255,255,0.1)',

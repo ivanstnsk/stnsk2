@@ -19,7 +19,6 @@ const styles: AppStyles = ({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      marginTop: 70,
     },
     titleContainer: {
       display: 'flex',

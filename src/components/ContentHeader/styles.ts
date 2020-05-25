@@ -1,13 +1,25 @@
 import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
-const styles: AppStyles = ({ colors: { typography: { title, subTitle } } }) => {
+const styles: AppStyles = ({
+  colors: {
+    typography: { title, subTitle },
+  },
+  sizes: {
+    content: { offsetHorizontal },
+    page: { offsetTop },
+  },
+}) => {
   return {
     container: {
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'flex-start',
       justifyContent: 'flex-start',
+      marginTop: offsetTop,
+      marginLeft: offsetHorizontal,
+      marginRight: offsetHorizontal,
+      marginBottom: 30,
     },
     title: {
       fontSize: 50,
