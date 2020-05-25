@@ -17,6 +17,7 @@ import {
   GithubIcon,
   LinkedInIcon,
   InstagramIcon,
+  TelescopeIcon,
 } from './icons';
 import { TSvgIconType, SvgIconInnerProps } from './types';
 
@@ -42,6 +43,7 @@ const getIcon = (type: TSvgIconType): React.FC<SvgIconInnerProps> => {
     case 'github': return GithubIcon;
     case 'linkedin': return LinkedInIcon;
     case 'instagram': return InstagramIcon;
+    case 'not-found': return TelescopeIcon;
     default: return CVIcon;
   }
 };

@@ -15,3 +15,5 @@ export {SkypeIcon} from './SkypeIcon';
 export {GithubIcon} from './GithubIcon';
 export {LinkedInIcon} from './LinkedInIcon';
 export {InstagramIcon} from './InstagramIcon';
+
+export { TelescopeIcon } from './TelescopeIcon';
