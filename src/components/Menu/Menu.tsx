@@ -25,6 +25,9 @@ const getActiveButtonPosition = (url: string): number => {
   if (isButtonActive(url, 'contacts')) {
     return 3;
   }
+  if (isButtonActive(url, 'articles')) {
+    return 4;
+  }
   return 0;
 };
 
@@ -70,6 +73,11 @@ const MenuComp: React.FC<{}> = () => {
             type="contacts"
             onClick={getNavigatorHandler(Routes.CONTACTS)}
             active={isButtonActive(location.pathname, 'contacts')}
+          />
+          <MenuButton
+            type="articles"
+            onClick={getNavigatorHandler(Routes.ARTICLES)}
+            active={isButtonActive(location.pathname, 'articles')}
           />
         </div>
       </div>

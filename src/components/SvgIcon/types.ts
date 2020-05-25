@@ -3,6 +3,7 @@ export type TSvgIconType =
 | 'about'
 | 'projects'
 | 'contacts'
+| 'articles'
 | 'logo'
 | 'web'
 | 'mobile'

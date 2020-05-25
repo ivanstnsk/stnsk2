@@ -14,6 +14,7 @@ import {
   Projects,
   Contacts,
   CV,
+  Articles,
 } from 'screens';
 
 import { useStyles } from './styles';
@@ -24,6 +25,7 @@ const routes = [
   { path: Routes.PROJECTS, Component: Projects },
   { path: Routes.CONTACTS, Component: Contacts },
   { path: Routes.CV, Component: CV },
+  { path: Routes.ARTICLES, Component: Articles },
 ];
 
 const AppContainerComp: React.FC<{}> = () => {

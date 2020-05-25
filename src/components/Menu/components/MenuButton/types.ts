@@ -2,4 +2,5 @@ export type TButtonType =
 | 'cv'
 | 'about'
 | 'projects'
-| 'contacts';
+| 'contacts'
+| 'articles';
