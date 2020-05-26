@@ -4,14 +4,15 @@ import {
   ContentHeader,
   ScrollContent,
   ContentContainer,
-  NoPage,
+  SectionTitle,
 } from 'components';
 
-// import { useStyles } from './styles';
+import { ProjectCard } from './components';
+import { useStyles } from './styles';
 
 
 export const Projects: React.FC<{}> = () => {
-  // const classes = useStyles();
+  const classes = useStyles();
 
   return (
     <>
@@ -21,7 +22,34 @@ export const Projects: React.FC<{}> = () => {
       />
       <ScrollContent>
         <ContentContainer>
-          <NoPage />
+          <SectionTitle>Personal projects</SectionTitle>
+          <div className={classes.cardsWrapper}>
+            <div className={classes.cardsContainer}>
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+            </div>
+          </div>
+          <SectionTitle>Commercial projects</SectionTitle>
+          <div className={classes.cardsWrapper}>
+            <div className={classes.cardsContainer}>
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+              <ProjectCard />
+            </div>
+          </div>
         </ContentContainer>
       </ScrollContent>
     </>

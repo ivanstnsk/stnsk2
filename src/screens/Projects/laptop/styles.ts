@@ -4,7 +4,18 @@ import { useTStyles } from 'hooks';
 
 const styles: AppStyles = () => {
   return {
-    container: {
+    cardsWrapper: {
+      width: '100%',
+      overflow: 'visible',
+      marginBottom: 70,
+    },
+    cardsContainer: {
+      display: 'flex',
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+      alignItems: 'flex-start',
+      flexWrap: 'wrap',
+      margin: -15,
     },
   };
 };
