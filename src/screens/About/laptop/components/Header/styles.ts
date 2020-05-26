@@ -43,6 +43,8 @@ const styles: AppStyles = ({
     photo: {
       width: 160,
       height: 160,
+      minHeight: 160,
+      minWidth: 160,
       backgroundImage: `url(${photoRes})`,
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
