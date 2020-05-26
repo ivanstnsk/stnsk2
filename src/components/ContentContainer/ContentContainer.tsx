@@ -13,8 +13,10 @@ export const ContentContainer: React.FC<ContentContainerProps> = ({
   const classes = useStyles();
 
   return (
-    <div className={classes.container}>
-      {children}
+    <div className={classes.wrapper}>
+      <div className={classes.container}>
+        {children}
+      </div>
     </div>
   );
 };

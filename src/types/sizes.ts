@@ -3,6 +3,7 @@ export type TSizes = {
     offsetHorizontal: number;
     offsetTop: number;
     offsetBottom: number;
+    maxWidth: number;
   };
   page: {
     offsetTop: number;
@@ -12,6 +13,7 @@ export type TSizes = {
     mainCircleButtonSize: number;
   };
   menu: {
+    width: number;
     buttonSize: number;
     buttonIconSize: number;
     buttonOffset: number;

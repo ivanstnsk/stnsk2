@@ -6,6 +6,7 @@ export const sizes: TSizes = {
     offsetHorizontal: 100,
     offsetTop: 40,
     offsetBottom: 40,
+    maxWidth: 860,
   },
   page: {
     offsetTop: 40,
@@ -15,6 +16,7 @@ export const sizes: TSizes = {
     mainCircleButtonSize: 134,
   },
   menu: {
+    width: 120,
     buttonSize: 80,
     buttonIconSize: 30,
     buttonOffset: 15,

@@ -6,14 +6,21 @@ type TStylesProps = {
   activeButtonPosition: number;
 };
 
-const styles: AppStyles = ({ colors: { primary: { bg, greenMedium } } }) => {
+const styles: AppStyles = ({
+  colors: {
+    primary: { bg, greenMedium },
+  },
+  sizes: {
+    menu: { width },
+  },
+}) => {
   return {
     container: {
       display: 'flex',
       flex: 1,
-      width: 120,
-      minWidth: 120,
-      maxWidth: 120,
+      width,
+      minWidth: width,
+      maxWidth: width,
       overflow: 'hidden',
       flexDirection: 'column',
       alignItems: 'center',
