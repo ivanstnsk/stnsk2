@@ -10,7 +10,6 @@ const styles: AppStyles = ({ colors: { typography: { title, text } } }) => {
       flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center',
-      paddingRight: 120,
       paddingBottom: 156,
     },
     title: {
