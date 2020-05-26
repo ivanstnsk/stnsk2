@@ -24,6 +24,7 @@ const styles: AppStyles = ({
     container: {
       display: 'flex',
       flex: 1,
+      width: '100%',
       maxWidth: contentMaxWidth,
       flexDirection: 'column',
       justifyContent: 'flex-start',
