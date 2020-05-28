@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { CategoryLabel } from 'components';
+import { CategoryLabel, SvgProjectIcon } from 'components';
 
 import { useStyles } from './styles';
 
@@ -11,25 +11,20 @@ export const ProjectCard: React.FC<{}> = () => {
   return (
     <button className={classes.button}>
       <div className={classes.imageContainer}>
-
+        <SvgProjectIcon
+          type="virtual-tours"
+          color="rgba(255,255,255,0.5)"
+          width={80}
+          height={80}
+        />
       </div>
       <div className={classes.text}>
-        Project title
+        Virtual Tours App
       </div>
       <div className={classes.labelsContainer}>
         <CategoryLabel
-          type="web"
-          label="Web"
-          size="small"
-        />
-        <CategoryLabel
           type="mobile"
           label="Mobile"
-          size="small"
-        />
-        <CategoryLabel
-          type="bot"
-          label="Bot"
           size="small"
         />
       </div>

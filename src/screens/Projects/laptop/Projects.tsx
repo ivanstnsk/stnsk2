@@ -36,7 +36,7 @@ export const Projects: React.FC<{}> = () => {
               <ProjectCard />
             </div>
           </div>
-          <SectionTitle>Commercial projects</SectionTitle>
+          <SectionTitle>Commercial projects under NDA</SectionTitle>
           <div className={classes.cardsWrapper}>
             <div className={classes.cardsContainer}>
               <ProjectCard />
