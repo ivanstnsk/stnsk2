@@ -14,3 +14,4 @@ export { ContentContainer } from './ContentContainer';
 export { NoPage } from './NoPage';
 export { CategoryLabel } from './CategoryLabel';
 export { SvgProjectIcon } from './SvgProjectIcon';
+export { TransitionInnerScreenWrapper } from './TransitionInnerScreenWrapper';
