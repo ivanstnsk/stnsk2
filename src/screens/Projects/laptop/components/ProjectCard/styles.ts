@@ -38,8 +38,8 @@ const styles: AppStyles = ({
         transform: 'scaleX(1.05) scaleY(1.05)',
         transition: 'transform 0.4s ease',
       },
-      '&:active': {
-        transform: 'scaleX(1) scaleY(1)',
+      '&:active svg path': {
+        stroke: 'blue',
       },
     },
     imageContainer: {
