@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import { useStyles } from './styles';
 
@@ -15,7 +15,7 @@ interface TransitionScreenWrapperProps {
   children: JSX.Element | JSX.Element[];
 }
 
-export const TransitionScreenWrapper: React.FC<TransitionScreenWrapperProps> = ({
+const TransitionScreenWrapperComp: React.FC<TransitionScreenWrapperProps> = ({
   transitionState,
   children,
 }) => {
@@ -29,3 +29,10 @@ export const TransitionScreenWrapper: React.FC<TransitionScreenWrapperProps> = (
     </div>
   );
 };
+
+export const TransitionScreenWrapper = memo(
+  TransitionScreenWrapperComp,
+  (prevProps, nextProps) => {
+    return prevProps.transitionState === nextProps.transitionState;
+  },
+);
