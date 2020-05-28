@@ -13,3 +13,4 @@ export { ScrollContent } from './ScrollContent';
 export { ContentContainer } from './ContentContainer';
 export { NoPage } from './NoPage';
 export { CategoryLabel } from './CategoryLabel';
+export { SvgProjectIcon } from './SvgProjectIcon';
