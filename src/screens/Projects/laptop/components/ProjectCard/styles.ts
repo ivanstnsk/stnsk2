@@ -29,6 +29,7 @@ const styles: AppStyles = ({
       boxShadow: '0px 0px 15px rgba(0, 0, 0, 0.25)',
       outline: 'none',
       cursor: 'pointer',
+      textDecoration: 'none',
       margin: 15,
       padding: 0,
       transition: 'transform 0.4s ease',
@@ -36,6 +37,9 @@ const styles: AppStyles = ({
       '&:hover': {
         transform: 'scaleX(1.05) scaleY(1.05)',
         transition: 'transform 0.4s ease',
+      },
+      '&:active': {
+        transform: 'scaleX(1) scaleY(1)',
       },
     },
     imageContainer: {

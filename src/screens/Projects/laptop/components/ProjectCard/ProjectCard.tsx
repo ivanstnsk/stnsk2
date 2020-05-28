@@ -1,15 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { CategoryLabel, SvgProjectIcon } from 'components';
+import { Routes } from 'types';
 
 import { useStyles } from './styles';
 
 
-export const ProjectCard: React.FC<{}> = () => {
+interface ProjectCardProps {
+  id: string;
+}
+
+export const ProjectCard: React.FC<ProjectCardProps> = ({
+  id,
+}) => {
   const classes = useStyles();
 
   return (
-    <button className={classes.button}>
+    <Link
+      className={classes.button}
+      to={`${Routes.PROJECTS}/${id}`}
+    >
       <div className={classes.imageContainer}>
         <SvgProjectIcon
           type="virtual-tours"
@@ -39,6 +50,6 @@ export const ProjectCard: React.FC<{}> = () => {
       >
         <rect x="2" y="2" width={266 - 4} height={268 - 4} rx="10" stroke="#81AF65" strokeWidth="2" />
       </svg>
-    </button>
+    </Link>
   );
 };
