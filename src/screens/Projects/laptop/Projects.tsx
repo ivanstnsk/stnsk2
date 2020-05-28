@@ -25,29 +25,15 @@ export const Projects: React.FC<{}> = () => {
           <SectionTitle>Personal projects</SectionTitle>
           <div className={classes.cardsWrapper}>
             <div className={classes.cardsContainer}>
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+              <ProjectCard id="virtual-tours" />
+              <ProjectCard id="virtual-tours" />
+              <ProjectCard id="virtual-tours" />
             </div>
           </div>
           <SectionTitle>Commercial projects under NDA</SectionTitle>
           <div className={classes.cardsWrapper}>
             <div className={classes.cardsContainer}>
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
-              <ProjectCard />
+
             </div>
           </div>
         </ContentContainer>
