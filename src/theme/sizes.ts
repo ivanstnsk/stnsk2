@@ -11,6 +11,13 @@ export const sizes: TSizes = {
   page: {
     offsetTop: 40,
     offsetBottom: 0,
+    offsetTopCompact: 20,
+    header: {
+      offsetTop: 40,
+      offsetBottom: 30,
+      offsetTopCompact: 20,
+      offsetBottomCompact: 20,
+    },
   },
   buttons: {
     mainCircleButtonSize: 134,

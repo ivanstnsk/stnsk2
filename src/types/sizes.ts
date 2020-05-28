@@ -1,3 +1,21 @@
+export type TContentSize =
+  | 'normal'
+  | 'compact';
+
+export type TPageHeaderSizes = {
+  offsetTop: number;
+  offsetBottom: number;
+  offsetTopCompact: number;
+  offsetBottomCompact: number;
+};
+
+export type TPageSizes = {
+  offsetTop: number;
+  offsetBottom: number;
+  offsetTopCompact: number;
+  header: TPageHeaderSizes;
+};
+
 export type TSizes = {
   content: {
     offsetHorizontal: number;
@@ -5,10 +23,7 @@ export type TSizes = {
     offsetBottom: number;
     maxWidth: number;
   };
-  page: {
-    offsetTop: number;
-    offsetBottom: number;
-  };
+  page: TPageSizes;
   buttons: {
     mainCircleButtonSize: number;
   };
