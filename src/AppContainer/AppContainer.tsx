@@ -43,7 +43,6 @@ const AppContainerComp: React.FC<{}> = () => {
             {routes.map(({ path, Component }) => (
               <Route
                 key={path}
-                exact
                 path={path}
               >
                 {({ match }) => (
