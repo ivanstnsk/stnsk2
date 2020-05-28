@@ -22,7 +22,7 @@ import { useStyles } from './styles';
 
 const routes = [
   { path: Routes.ABOUT, Component: About },
-  { path: Routes.PROJECTS, Component: Projects },
+  { path: `${Routes.PROJECTS}/:projectId?`, Component: Projects },
   { path: Routes.CONTACTS, Component: Contacts },
   { path: Routes.CV, Component: CV },
   { path: Routes.ARTICLES, Component: Articles },
