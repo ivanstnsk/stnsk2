@@ -21,6 +21,12 @@ export const theme: AppTheme = {
       subTitle: EColors.GREY,
       text: EColors.GREY,
     },
+    categoryLabels: {
+      bot: EColors.PURPLE,
+      web: EColors.BLUE,
+      mobile: EColors.GREEN_BLUE,
+      other: EColors.GREY,
+    },
   },
   gradients: {
     bg: 'radial-gradient(66.25% 131.01% at 50% 50%, #1F2124 0%, #1F2124 60.94%, #7BA661 100%)',

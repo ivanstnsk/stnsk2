@@ -1,6 +1,8 @@
 import { DefaultTheme } from 'react-jss';
 import { EColors } from 'theme/colors';
+
 import { TSizes } from './sizes';
+import { TCategoryLabelColors } from './colors';
 
 
 export interface AppTheme extends DefaultTheme {
@@ -20,6 +22,7 @@ export interface AppTheme extends DefaultTheme {
       subTitle: EColors;
       text: EColors;
     };
+    categoryLabels: TCategoryLabelColors;
   };
   gradients: {
     bg: string;

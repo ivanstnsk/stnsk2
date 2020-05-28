@@ -12,3 +12,4 @@ export { Button} from './Button';
 export { ScrollContent } from './ScrollContent';
 export { ContentContainer } from './ContentContainer';
 export { NoPage } from './NoPage';
+export { CategoryLabel } from './CategoryLabel';
