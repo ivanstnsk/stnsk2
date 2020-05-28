@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { CategoryLabel } from 'components';
+
 import { useStyles } from './styles';
 
 
@@ -14,8 +16,22 @@ export const ProjectCard: React.FC<{}> = () => {
       <div className={classes.text}>
         Project title
       </div>
-      <div className={classes.label}>
-        Bot
+      <div className={classes.labelsContainer}>
+        <CategoryLabel
+          type="web"
+          label="Web"
+          size="small"
+        />
+        <CategoryLabel
+          type="mobile"
+          label="Mobile"
+          size="small"
+        />
+        <CategoryLabel
+          type="bot"
+          label="Bot"
+          size="small"
+        />
       </div>
       <svg
         className={classes.svg}
