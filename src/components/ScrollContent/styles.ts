@@ -8,12 +8,7 @@ type TStylesProps = {
 
 const styles: AppStyles = ({ colors: { primary: { underline } } }) => {
   return {
-    wrapper: {
-      width: '100%',
-      height: '100%',
-      overflow: 'hidden',
-    },
-    container: ({ showTopUnderline }: TStylesProps) => ({
+    innerScroll: ({ showTopUnderline }: TStylesProps) => ({
       width: '100%',
       display: 'flex',
       flex: 1,
