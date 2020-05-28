@@ -18,3 +18,4 @@ export {LinkedInIcon} from './LinkedInIcon';
 export {InstagramIcon} from './InstagramIcon';
 
 export { TelescopeIcon } from './TelescopeIcon';
+export { CloseIcon } from './CloseIcon';

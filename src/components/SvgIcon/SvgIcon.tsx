@@ -19,6 +19,7 @@ import {
   LinkedInIcon,
   InstagramIcon,
   TelescopeIcon,
+  CloseIcon,
 } from './icons';
 import { TSvgIconType, SvgIconInnerProps } from './types';
 
@@ -46,6 +47,7 @@ const getIcon = (type: TSvgIconType): React.FC<SvgIconInnerProps> => {
     case 'linkedin': return LinkedInIcon;
     case 'instagram': return InstagramIcon;
     case 'not-found': return TelescopeIcon;
+    case 'close': return CloseIcon;
     default: return CVIcon;
   }
 };
