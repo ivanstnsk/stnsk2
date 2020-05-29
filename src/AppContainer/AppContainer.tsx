@@ -30,6 +30,7 @@ const routes = [
 
 const AppContainerComp: React.FC<{}> = () => {
   const classes = useStyles();
+  console.log(process.env.NODE_ENV);
 
   return (
     <>
