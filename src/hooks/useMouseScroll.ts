@@ -1,20 +1,21 @@
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 
-type THook<T extends HTMLElement> = [
-  React.RefObject<T>,
-  number,
-];
+type THook<T extends HTMLElement> = [ React.RefObject<T> ];
 
-export const useMouseScroll = <T extends HTMLElement>(): THook<T> => {
-  const [scrollY, setScrollY] = useState<number>(0);
+type TScrollHandler = (scrollY: number) => void;
+
+
+export const useMouseScroll = <T extends HTMLElement>(onScroll?: TScrollHandler): THook<T> => {
   const ref = useRef<T>(null);
 
   // eslint-disable-next-line consistent-return
   useEffect(() => {
     const handleScroll = (event: Event): void => {
-      const { target } = event;
-      setScrollY((target as T).scrollTop);
+      if (onScroll) {
+        const { target } = event;
+        onScroll((target as T).scrollTop);
+      }
     };
     const node = ref && ref.current;
 
@@ -26,5 +27,5 @@ export const useMouseScroll = <T extends HTMLElement>(): THook<T> => {
     }
   }, [ref]);
 
-  return [ref, scrollY];
+  return [ref];
 };
