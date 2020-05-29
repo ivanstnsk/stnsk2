@@ -32,40 +32,46 @@ const AppContainerComp: React.FC<{}> = () => {
   const classes = useStyles();
 
   return (
-    <Router>
-      <Switch>
-        <Route exact path={Routes.HOME}>
-          <Home />
-        </Route>
-        <Route path="/">
-          <Menu />
-          <div className={classes.page}>
-            {routes.map(({ path, Component }) => (
-              <Route
-                key={path}
-                path={path}
-              >
-                {({ match }) => (
-                  <Transition
-                    in={match != null}
-                    timeout={600}
-                    unmountOnExit
-                  >
-                    {(state) => {
-                      return (
-                        <TransitionScreenWrapper transitionState={state}>
-                          <Component />
-                        </TransitionScreenWrapper>
-                      );
-                    }}
-                  </Transition>
-                )}
-              </Route>
-            ))}
-          </div>
-        </Route>
-      </Switch>
-    </Router>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path={Routes.HOME}>
+            <Home />
+          </Route>
+          <Route path="/">
+            <Menu />
+            <div className={classes.page}>
+              {routes.map(({ path, Component }) => (
+                <Route
+                  key={path}
+                  path={path}
+                >
+                  {({ match }) => (
+                    <Transition
+                      in={match != null}
+                      timeout={600}
+                      unmountOnExit
+                    >
+                      {(state) => {
+                        return (
+                          <TransitionScreenWrapper transitionState={state}>
+                            <Component />
+                          </TransitionScreenWrapper>
+                        );
+                      }}
+                    </Transition>
+                  )}
+                </Route>
+              ))}
+            </div>
+          </Route>
+        </Switch>
+      </Router>
+      <div className={classes.devLabel}>
+        Sorry! This website is in the stage of heavy development. Contact:
+        <a href="https://t.me/ivanstnsk">@ivanstnsk</a>
+      </div>
+    </>
   );
 };
 
