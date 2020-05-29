@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useCallback, useState } from 'react';
 
 import { useMouseScroll } from 'hooks';
 
@@ -7,27 +7,28 @@ import { useStyles } from './styles';
 
 interface ScrollContentProps {
   children: JSX.Element | JSX.Element[];
-  onReachTop?: (reached: boolean) => void;
+  onScroll?: (scrollY: number) => void;
 }
 
 export const ScrollContent: React.FC<ScrollContentProps> = ({
   children,
-  onReachTop,
+  onScroll,
 }) => {
-  const [containerRef, scrollY] = useMouseScroll<HTMLDivElement>();
-  const reachedTop = scrollY < 40;
+  const [showTopUnderline, setShowTopUnderline] = useState(false);
+
+  const handleScrollY = useCallback((scrollY: number) => {
+    setShowTopUnderline(scrollY > 0);
+
+    if (onScroll) {
+      onScroll(scrollY);
+    }
+  }, []);
+
+  const [containerRef] = useMouseScroll<HTMLDivElement>(handleScrollY);
 
   // TODO: Show custom scrollbar
 
-  const classes = useStyles({
-    showTopUnderline: scrollY > 0,
-  });
-
-  useEffect(() => {
-    if (onReachTop) {
-      onReachTop(reachedTop);
-    }
-  }, [reachedTop]);
+  const classes = useStyles({ showTopUnderline });
 
   return (
     <div
