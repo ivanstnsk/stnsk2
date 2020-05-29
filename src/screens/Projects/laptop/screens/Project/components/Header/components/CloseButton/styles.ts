@@ -11,6 +11,7 @@ const styles: AppStyles = () => {
       outline: 'none',
       background: 'transparent',
       cursor: 'pointer',
+      padding: 0,
     },
   };
 };

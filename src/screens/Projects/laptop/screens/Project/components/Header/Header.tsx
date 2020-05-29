@@ -18,22 +18,24 @@ export const Header: React.FC<{}> = () => {
   return (
     <div className={classes.wrapper}>
       <div className={classes.container}>
-        <div className={classes.photo} />
-        <div className={classes.titleContainer}>
-          <div className={classes.title}>
-            Virtual Tours
+        <div className={classes.innerContainer}>
+          <div className={classes.photo} />
+          <div className={classes.titleContainer}>
+            <div className={classes.title}>
+              Virtual Tours
           </div>
-          <div className={classes.subTitle}>
-            The marketplace for creating, celling and<br />
+            <div className={classes.subTitle}>
+              The marketplace for creating, celling and<br />
             purchasing virtual tours in the city (virtual guidance).<br />
             Includes mobile app and the website.
           </div>
+          </div>
         </div>
-        <div className={classes.rightContainer}>
-          <CloseButton
-            onClick={handleCloseClick}
-          />
-        </div>
+      </div>
+      <div className={classes.rightContainer}>
+        <CloseButton
+          onClick={handleCloseClick}
+        />
       </div>
     </div>
   );
