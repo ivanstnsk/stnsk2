@@ -1,15 +1,22 @@
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { TContentSize } from 'types/sizes';
 import { Routes } from 'types';
 
 import { CloseButton } from './components';
 import { useStyles } from './styles';
 
 
-export const Header: React.FC<{}> = () => {
+interface HeaderProps {
+  size?: TContentSize;
+}
+
+export const Header: React.FC<HeaderProps> = ({
+  size = 'normal',
+}) => {
   const history = useHistory();
-  const classes = useStyles();
+  const classes = useStyles({ size });
 
   const handleCloseClick = useCallback(() => {
     history.push(Routes.PROJECTS);
