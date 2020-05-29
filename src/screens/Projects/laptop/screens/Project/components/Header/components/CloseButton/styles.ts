@@ -5,8 +5,8 @@ import { useTStyles } from 'hooks';
 const styles: AppStyles = () => {
   return {
     button: {
-      width: 80,
-      height: 80,
+      width: 40,
+      height: 40,
       border: 'none',
       outline: 'none',
       background: 'transparent',
