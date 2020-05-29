@@ -34,9 +34,4 @@ const TransitionInnerScreenWrapperComp: React.FC<TransitionInnerScreenWrapperPro
   );
 };
 
-export const TransitionInnerScreenWrapper = memo(
-  TransitionInnerScreenWrapperComp,
-  (prevProps, nextProps) => {
-    return prevProps.transitionState === nextProps.transitionState;
-  },
-);
+export const TransitionInnerScreenWrapper = memo(TransitionInnerScreenWrapperComp);
