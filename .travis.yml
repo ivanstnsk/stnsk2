@@ -1,7 +1,18 @@
 language: node_js
 node_js:
-- "stable"
-before_script:
-- yarn
+  - "stable"
+cache: npm
+
+install:
+  - yarn
+
 script:
-- yarn build
+  - yarn build
+
+deploy:
+  provider: pages:git
+  skip-cleanup: true
+  token: $GITHUB_TOKEN
+  edge: true # opt in to dpl v2
+  on:
+    branch: master
