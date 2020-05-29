@@ -7,7 +7,7 @@ import {
 import { Transition } from 'react-transition-group';
 
 import { Routes } from 'types';
-import { Menu, TransitionScreenWrapper } from 'components';
+import { Menu, TransitionScreenWrapper, AccessDenied, Footer } from 'components';
 import {
   Home,
   About,
@@ -30,7 +30,15 @@ const routes = [
 
 const AppContainerComp: React.FC<{}> = () => {
   const classes = useStyles();
-  console.log(process.env.NODE_ENV);
+
+  if (process.env.NODE_ENV === 'production') {
+    return (
+      <>
+        <AccessDenied />
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>
@@ -68,10 +76,6 @@ const AppContainerComp: React.FC<{}> = () => {
           </Route>
         </Switch>
       </Router>
-      <div className={classes.devLabel}>
-        Sorry! This website is in the stage of heavy development. Contact:
-        <a href="https://t.me/ivanstnsk">@ivanstnsk</a>
-      </div>
     </>
   );
 };

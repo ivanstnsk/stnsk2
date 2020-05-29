@@ -15,3 +15,4 @@ export { NoPage } from './NoPage';
 export { CategoryLabel } from './CategoryLabel';
 export { SvgProjectIcon } from './SvgProjectIcon';
 export { TransitionInnerScreenWrapper } from './TransitionInnerScreenWrapper';
+export { AccessDenied } from './AccessDenied';
