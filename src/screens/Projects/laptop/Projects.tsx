@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { memo } from 'react';
 
 import {
   ContentHeader,
@@ -6,21 +6,22 @@ import {
   ContentContainer,
   SectionTitle,
 } from 'components';
+import { useContentSize } from 'hooks';
 
 import { Project } from './screens';
 import { ProjectCard } from './components';
-import { THeaderSize } from './types';
 import { useStyles } from './styles';
 
 
-const ProjectsComp: React.FC<{}> = () => {
-  const [headerSize, setHeaderSize] = useState<THeaderSize>('normal');
-  const classes = useStyles();
+const SCROLL_RANGES = {
+  compact: [
+    [40, Infinity],
+  ],
+};
 
-  const handleScrollReachTop = useCallback((reached: boolean) => {
-    const nextHeaderType = reached ? 'normal' : 'compact';
-    setHeaderSize(nextHeaderType);
-  }, []);
+const ProjectsComp: React.FC<{}> = () => {
+  const [headerSize, onScrollY] = useContentSize(SCROLL_RANGES);
+  const classes = useStyles();
 
   return (
     <>
@@ -29,7 +30,7 @@ const ProjectsComp: React.FC<{}> = () => {
         subTitle="My commercial and not really projects"
         size={headerSize}
       />
-      <ScrollContent onReachTop={handleScrollReachTop}>
+      <ScrollContent onScroll={onScrollY}>
         <ContentContainer>
           <SectionTitle>Personal projects</SectionTitle>
           <div className={classes.cardsWrapper}>
