@@ -1,1 +1,0 @@
-export { MainSkillIcon } from './MainSkillIcon';

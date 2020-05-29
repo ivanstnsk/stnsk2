@@ -1,6 +1,0 @@
-{
-  "eslint.nodePath": "src/",
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-  // "typescript.format.enable": false
-}

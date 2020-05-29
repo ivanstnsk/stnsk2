@@ -1,1 +1,0 @@
-export { SvgProjectIcon } from './SvgProjectIcon';
