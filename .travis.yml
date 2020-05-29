@@ -1,8 +1,7 @@
-language: nodejs
-
+language: node_js
+node_js:
+- "stable"
 before_script:
-  - yarn
-  - yarn lint
-
-after_success:
-  - yarn build
+- yarn
+script:
+- yarn build
