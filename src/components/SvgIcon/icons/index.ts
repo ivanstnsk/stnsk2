@@ -19,3 +19,5 @@ export {InstagramIcon} from './InstagramIcon';
 
 export { TelescopeIcon } from './TelescopeIcon';
 export { CloseIcon } from './CloseIcon';
+export { MaintenanceIcon } from './MaintenanceIcon';
+

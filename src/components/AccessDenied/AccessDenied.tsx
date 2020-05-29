@@ -11,7 +11,7 @@ export const AccessDenied: React.FC<{}> = () => {
   return (
     <div className={classes.container}>
       <SvgIcon
-        type="not-found"
+        type="maintenance"
         width={200}
         height={200}
         color="rgba(255,255,255,0.05)"

@@ -15,7 +15,8 @@ export type TSvgIconType =
 | 'instagram'
 | 'linkedin'
 | 'not-found'
-| 'close';
+| 'close'
+| 'maintenance';
 
 export interface SvgIconInnerProps {
   color: string;
