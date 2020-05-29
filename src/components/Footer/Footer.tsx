@@ -12,9 +12,9 @@ export const Footer: React.FC<{}> = () => {
   return (
     <div className={classes.container}>
       <div className={classes.version}>
-        DEV ENV
+        Built with Travis CI ♥
         <br />
-        Build version: {buildNumber}
+        Deploy version: {buildNumber}
       </div>
     </div>
   );
