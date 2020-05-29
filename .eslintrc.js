@@ -35,6 +35,7 @@ module.exports = {
     'jsx-quotes': ['error', 'prefer-double'],
     '@typescript-eslint/no-unused-vars': 2,
     '@typescript-eslint/explicit-member-accessibility': 2,
+    '@typescript-eslint/no-explicit-any': [0, 'always'],
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/explicit-function-return-type': [
       'error',

@@ -25,7 +25,7 @@ export const useMouseScroll = <T extends HTMLElement>(onScroll?: TScrollHandler)
         node.removeEventListener('scroll', handleScroll);
       };
     }
-  }, [ref]);
+  }, [ref, onScroll]);
 
   return [ref];
 };

@@ -1,4 +1,4 @@
-import { AppStyles } from 'types/style';
+import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
 
@@ -22,6 +22,4 @@ const styles: AppStyles = () => {
   };
 };
 
-type TStyles = Record<string, any>;
-
-export const useStyles = (): TStyles => useTStyles(styles);
+export const useStyles = (): AppInnerStyles => useTStyles(styles);

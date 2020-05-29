@@ -1,15 +1,9 @@
-import { AppStyles } from 'types/style';
+import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
 
-// type LaptopStylesProps = {
-//   color: string;
-//   width: number;
-// };
-
 const styles: AppStyles = ({ colors: { primary } }) => {
   return {
-    // container: ({color, width}: LaptopStylesProps) => {
     container: () => {
       return {
         backgroundColor: primary.bg,
@@ -22,7 +16,4 @@ const styles: AppStyles = ({ colors: { primary } }) => {
   };
 };
 
-type TStyles = Record<string, any>;
-
-// export const useStyles = (props: LaptopStylesProps): TStyles => useTStyles(styles, props);
-export const useStyles = (): TStyles => useTStyles(styles);
+export const useStyles = (): AppInnerStyles => useTStyles(styles);

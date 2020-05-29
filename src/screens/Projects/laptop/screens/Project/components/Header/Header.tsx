@@ -20,7 +20,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   const handleCloseClick = useCallback(() => {
     history.push(Routes.PROJECTS);
-  }, []);
+  }, [history]);
 
   return (
     <div className={classes.wrapper}>

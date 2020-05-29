@@ -21,7 +21,7 @@ export const Home: React.FC<HomeProps> = ({
     setTimeout(() => {
       onNavigateAbout();
     }, 1200);
-  }, [setShowMode, showMode]);
+  }, [setShowMode, showMode, onNavigateAbout]);
 
   return (
     <div className={classes.container}>

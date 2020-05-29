@@ -28,7 +28,7 @@ const MenuButtonComp: React.FC<MenuButtonProps> = ({
     if (onClick) {
       onClick(type);
     }
-  }, []);
+  }, [onClick]);
 
   return (
     <button

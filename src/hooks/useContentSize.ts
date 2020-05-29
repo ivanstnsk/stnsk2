@@ -43,7 +43,7 @@ export const useContentSize = (sizes: THookProps): THook => {
   const handleScrollY = useCallback((scrollY: number) => {
     const nextSize = getContentSize(sizes, scrollY);
     setSize(nextSize);
-  }, [setSize]);
+  }, [setSize, sizes]);
 
   return [
     size,

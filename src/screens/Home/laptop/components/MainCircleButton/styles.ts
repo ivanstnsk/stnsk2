@@ -1,4 +1,4 @@
-import { AppStyles } from 'types/style';
+import { AppStyles, AppInnerStyles } from 'types/style';
 import { useTStyles } from 'hooks';
 
 // eslint-disable-next-line
@@ -36,12 +36,12 @@ const getIcon = (type: TButtonType): string => {
   }
 };
 
-const getIconStyles = () => ({ type }: MainCircleButtonStylesProps): TStyles => {
+const getIconStyles = () => ({ type }: MainCircleButtonStylesProps): AppInnerStyles => {
   const iconRes = getIcon(type);
 
   return {
-    width: 54,
-    height: 54,
+    width: '54px',
+    height: '54px',
     display: 'block',
     backgroundImage: `url(${iconRes})`,
     backgroundRepeat: 'no-repeat',
@@ -122,6 +122,6 @@ const styles: AppStyles = ({
   };
 };
 
-type TStyles = Record<string, any>;
-
-export const useStyles = (props: MainCircleButtonStylesProps): TStyles => useTStyles(styles, props);
+export const useStyles = (props: MainCircleButtonStylesProps): AppInnerStyles => {
+  return useTStyles(styles, props);
+};

@@ -22,7 +22,7 @@ export const ScrollContent: React.FC<ScrollContentProps> = ({
     if (onScroll) {
       onScroll(scrollY);
     }
-  }, []);
+  }, [onScroll, setShowTopUnderline]);
 
   const [containerRef] = useMouseScroll<HTMLDivElement>(handleScrollY);
 

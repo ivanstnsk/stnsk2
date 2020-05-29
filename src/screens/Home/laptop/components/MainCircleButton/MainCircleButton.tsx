@@ -25,7 +25,7 @@ const MainCircleButtonComp: React.FC<TMainCircleButton> = ({
     if (onClick) {
       onClick(type);
     }
-  }, []);
+  }, [onClick]);
 
   return (
     <button
