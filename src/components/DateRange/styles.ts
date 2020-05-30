@@ -3,7 +3,7 @@ import { useTStyles } from 'hooks';
 
 const styles: AppStyles = ({
   colors: {
-    primary: { underline },
+    primary: { bg, underline },
     typography: { title, text },
   },
 }) => {
@@ -30,6 +30,12 @@ const styles: AppStyles = ({
       paddingRight: 15,
       paddingTop: 10,
       paddingBottom: 12,
+      transition: 'all 0.4s ease',
+
+      '&:hover': {
+        backgroundColor: bg,
+        transition: 'all 0.4s ease',
+      },
     },
     cellTitle: {
       width: '100%',
