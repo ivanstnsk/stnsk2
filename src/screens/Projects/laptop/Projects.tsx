@@ -7,11 +7,17 @@ import {
   SectionTitle,
 } from 'components';
 import { useContentSize } from 'hooks';
+import { TProjectData } from 'types/data';
 
 import { Project } from './screens';
 import { ProjectCard } from './components';
 import { useStyles } from './styles';
 
+
+interface ProjectsProps {
+  commercial: TProjectData[];
+  personal: TProjectData[];
+}
 
 const SCROLL_RANGES = {
   compact: [
@@ -19,7 +25,10 @@ const SCROLL_RANGES = {
   ],
 };
 
-const ProjectsComp: React.FC<{}> = () => {
+const ProjectsComp: React.FC<ProjectsProps> = ({
+  commercial,
+  personal,
+}) => {
   const [headerSize, onScrollY] = useContentSize(SCROLL_RANGES);
   const classes = useStyles();
 
@@ -35,32 +44,23 @@ const ProjectsComp: React.FC<{}> = () => {
           <SectionTitle>Personal projects</SectionTitle>
           <div className={classes.cardsWrapper}>
             <div className={classes.cardsContainer}>
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
+              {personal.map((data) => (
+                <ProjectCard
+                  key={data.id}
+                  id={data.id}
+                />
+              ))}
             </div>
           </div>
           <SectionTitle>Commercial projects under NDA</SectionTitle>
           <div className={classes.cardsWrapper}>
             <div className={classes.cardsContainer}>
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
-              <ProjectCard id="virtual-tours" />
+              {commercial.map((data) => (
+                <ProjectCard
+                  key={data.id}
+                  id={data.id}
+                />
+              ))}
             </div>
           </div>
         </ContentContainer>
