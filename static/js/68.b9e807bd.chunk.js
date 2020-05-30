@@ -1,2 +1,0 @@
-(this.webpackJsonpstnsk=this.webpackJsonpstnsk||[]).push([[68],{141:function(e,t,n){"use strict";n.r(t),n.d(t,"Articles",(function(){return s}));var l=n(0),r=n.n(l),a=n(8),s=function(){return r.a.createElement(r.a.Fragment,null,r.a.createElement(a.f,{title:"Articles",subTitle:"Everything I have written"}),r.a.createElement(a.o,null,r.a.createElement(a.e,null,r.a.createElement(a.m,null))))}}}]);
-//# sourceMappingURL=68.b9e807bd.chunk.js.map
