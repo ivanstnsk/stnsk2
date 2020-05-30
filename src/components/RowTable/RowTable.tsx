@@ -14,17 +14,19 @@ export const RowTable: React.FC<RowTableProps> = ({
 
   return (
     <table className={classes.table}>
-      <tr>
-        {rows.map(([title, text]) => (
-          <td
-            className={classes.cell}
-            key={title}
-          >
-            <div className={classes.cellTitle}>{title}</div>
-            <div className={classes.cellText}>{text}</div>
-          </td>
-        ))}
-      </tr>
+      <tbody>
+        <tr>
+          {rows.map(([title, text]) => (
+            <td
+              className={classes.cell}
+              key={title}
+            >
+              <div className={classes.cellTitle}>{title}</div>
+              <div className={classes.cellText}>{text}</div>
+            </td>
+          ))}
+        </tr>
+      </tbody>
     </table>
   );
 };
