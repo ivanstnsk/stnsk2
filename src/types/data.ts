@@ -7,6 +7,7 @@ export type TProjectData = {
   type: TProjectType;
   title: string;
   subTitle: string;
+  tags: string[];
 };
 
 export type TProjectsListData = TProjectData[];
