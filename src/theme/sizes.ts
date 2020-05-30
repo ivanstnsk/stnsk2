@@ -8,6 +8,11 @@ export const sizes: TSizes = {
     offsetBottom: 40,
     maxWidth: 860,
   },
+  contentSection: {
+    offsetTop: 30,
+    offsetBottom: 40,
+    maxWidth: 740,
+  },
   page: {
     offsetTop: 40,
     offsetBottom: 0,

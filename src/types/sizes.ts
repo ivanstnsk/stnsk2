@@ -16,6 +16,12 @@ export type TPageSizes = {
   header: TPageHeaderSizes;
 };
 
+export type TContentSectionSizes = {
+  offsetTop: number;
+  offsetBottom: number;
+  maxWidth: number;
+};
+
 export type TSizes = {
   content: {
     offsetHorizontal: number;
@@ -24,6 +30,7 @@ export type TSizes = {
     maxWidth: number;
   };
   page: TPageSizes;
+  contentSection: TContentSectionSizes;
   buttons: {
     mainCircleButtonSize: number;
   };
