@@ -11,10 +11,14 @@ import { useStyles } from './styles';
 
 interface HeaderProps {
   size?: TContentSize;
+  title: string;
+  subTitle: string;
 }
 
 export const Header: React.FC<HeaderProps> = ({
   size = 'normal',
+  title,
+  subTitle,
 }) => {
   const history = useHistory();
   const classes = useStyles({ size });
@@ -30,17 +34,13 @@ export const Header: React.FC<HeaderProps> = ({
           <div className={classes.photo} />
           <div className={classes.midContainer}>
             <div className={classes.titleContainer}>
-              <div className={classes.title}>Virtual Tours</div>
+              <div className={classes.title}>{title}</div>
               <CategoryLabel
                 type="web"
                 label="Web"
               />
             </div>
-            <div className={classes.subTitle}>
-              The marketplace for creating, celling and<br />
-            purchasing virtual tours in the city (virtual guidance).<br />
-            Includes mobile app and the website.
-          </div>
+            <div className={classes.subTitle}>{subTitle}</div>
           </div>
         </div>
       </div>
