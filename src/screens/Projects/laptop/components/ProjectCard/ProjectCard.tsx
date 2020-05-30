@@ -1,25 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback } from 'react';
 
 import { CategoryLabel, SvgProjectIcon } from 'components';
-import { Routes } from 'types';
 
 import { useStyles } from './styles';
 
 
 interface ProjectCardProps {
   id: string;
+  onClick: (projectId: string) => void;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   id,
+  onClick,
 }) => {
   const classes = useStyles();
 
+  const handleClick = useCallback(() => {
+    if (onClick) {
+      onClick(id);
+    }
+  }, [onClick, id]);
+
   return (
-    <Link
+    <button
       className={classes.button}
-      to={`${Routes.PROJECTS}/${id}`}
+      onClick={handleClick}
     >
       <div className={classes.imageContainer}>
         <SvgProjectIcon
@@ -50,6 +56,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       >
         <rect x="2" y="2" width={266 - 4} height={268 - 4} rx="10" stroke="#81AF65" strokeWidth="2" />
       </svg>
-    </Link>
+    </button>
   );
 };

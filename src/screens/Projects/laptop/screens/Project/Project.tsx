@@ -15,12 +15,13 @@ import { TContentSize } from 'types/sizes';
 import { useContentSize } from 'hooks';
 
 import { useState } from './redux';
-import { Header } from './components';
+import { Header, EmptyHeader } from './components';
 import { useStyles } from './styles';
 
 
 interface ProjectProps {
   offsetSize?: TContentSize;
+  lastProject?: string;
 }
 
 const SCROLL_RANGES = {
@@ -31,10 +32,11 @@ const SCROLL_RANGES = {
 
 export const Project: React.FC<ProjectProps> = ({
   offsetSize,
+  lastProject,
 }) => {
   const [headerSize, onScrollY] = useContentSize(SCROLL_RANGES);
   const { projectId } = useParams();
-  const { data } = useState(projectId);
+  const { data } = useState(projectId || lastProject);
   const classes = useStyles();
   const isVisible = !!projectId;
 
@@ -51,7 +53,10 @@ export const Project: React.FC<ProjectProps> = ({
         >
           <div className={classes.wrapper}>
             {!data ? (
-              <NoPage />
+              <>
+                <EmptyHeader />
+                <NoPage />
+              </>
             ) : (<>
               <Header
                 size={headerSize}

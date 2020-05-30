@@ -1,4 +1,5 @@
-import React, { memo } from 'react';
+import React, { memo, useCallback, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
 import {
   ContentHeader,
@@ -7,6 +8,7 @@ import {
   SectionTitle,
 } from 'components';
 import { useContentSize } from 'hooks';
+import { Routes } from 'types';
 import { TProjectData } from 'types/data';
 
 import { Project } from './screens';
@@ -29,8 +31,15 @@ const ProjectsComp: React.FC<ProjectsProps> = ({
   commercial,
   personal,
 }) => {
+  const [lastProject, setLastProject] = useState<string | undefined>(undefined);
   const [headerSize, onScrollY] = useContentSize(SCROLL_RANGES);
+  const history = useHistory();
   const classes = useStyles();
+
+  const handleProjectClick = useCallback((projectId: string) => {
+    setLastProject(projectId);
+    history.push(`${Routes.PROJECTS}/${projectId}`);
+  }, [setLastProject, history]);
 
   return (
     <>
@@ -48,8 +57,13 @@ const ProjectsComp: React.FC<ProjectsProps> = ({
                 <ProjectCard
                   key={data.id}
                   id={data.id}
+                  onClick={handleProjectClick}
                 />
               ))}
+              <ProjectCard
+                id="1254234"
+                onClick={handleProjectClick}
+              />
             </div>
           </div>
           <SectionTitle>Commercial projects under NDA</SectionTitle>
@@ -59,13 +73,17 @@ const ProjectsComp: React.FC<ProjectsProps> = ({
                 <ProjectCard
                   key={data.id}
                   id={data.id}
+                  onClick={handleProjectClick}
                 />
               ))}
             </div>
           </div>
         </ContentContainer>
       </ScrollContent>
-      <Project offsetSize={headerSize} />
+      <Project
+        offsetSize={headerSize}
+        lastProject={lastProject}
+      />
     </>
   );
 };
