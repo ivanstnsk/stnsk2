@@ -1,2 +1,0 @@
-(this.webpackJsonpstnsk=this.webpackJsonpstnsk||[]).push([[36,75],{142:function(e,n,t){"use strict";t.r(n),t.d(n,"CV",(function(){return u}));var a=t(0),r=t.n(a),l=t(8),u=function(){return r.a.createElement(r.a.Fragment,null,r.a.createElement(l.e,{title:"CV",subTitle:"You can download my CV here"}),r.a.createElement(l.n,null,r.a.createElement(l.d,null,r.a.createElement(l.l,null))))}},76:function(e,n,t){"use strict";t.r(n);var a=t(142);t.d(n,"default",(function(){return a.CV}))}}]);
-//# sourceMappingURL=36.5b9a08f9.chunk.js.map

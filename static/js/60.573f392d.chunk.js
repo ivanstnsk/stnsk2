@@ -1,0 +1,2 @@
+(this.webpackJsonpstnsk=this.webpackJsonpstnsk||[]).push([[60,90],{93:function(t,n,e){"use strict";e.r(n),e.d(n,"useState",(function(){return u}));var r=e(20),c=e(97),u=function(t){return{data:Object(r.b)(Object(c.selectProject)(t))}}},97:function(t,n,e){"use strict";e.r(n),e.d(n,"selectProjects",(function(){return c})),e.d(n,"selectProject",(function(){return u}));var r=e(56),c=function(t){return t.projects},u=function(t){return Object(r.a)([c],(function(n){return n.find((function(n){return n.id===t}))}))}}}]);
+//# sourceMappingURL=60.573f392d.chunk.js.map

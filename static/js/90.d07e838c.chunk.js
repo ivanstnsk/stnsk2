@@ -1,0 +1,2 @@
+(this.webpackJsonpstnsk=this.webpackJsonpstnsk||[]).push([[90],{97:function(n,t,r){"use strict";r.r(t),r.d(t,"selectProjects",(function(){return c})),r.d(t,"selectProject",(function(){return s}));var e=r(56),c=function(n){return n.projects},s=function(n){return Object(e.a)([c],(function(t){return t.find((function(t){return t.id===n}))}))}}}]);
+//# sourceMappingURL=90.d07e838c.chunk.js.map
