@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import { TStore } from 'types/store';
+import { TState } from 'types/store';
 
 import { projectsReducer } from './projects';
 
 
-export const reducer = combineReducers<TStore>({
+export const reducer = combineReducers<TState>({
   projects: projectsReducer,
 });

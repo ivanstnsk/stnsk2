@@ -1,8 +1,8 @@
 import { TProjectsListData } from 'types/data';
 
 
-export type TProjectsStore = TProjectsListData;
+export type TProjectsState = TProjectsListData;
 
-export type TStore = {
+export type TState = {
   projects: TProjectsListData;
 };

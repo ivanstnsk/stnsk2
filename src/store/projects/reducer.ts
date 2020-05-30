@@ -1,11 +1,10 @@
 import { Reducer } from 'redux';
 
+import { TProjectsState } from 'types/store';
 import { TProjectsListData } from 'types/data';
 
 import { ProjectsActions, TProjectsActionScheme } from './actions';
 
-
-type TProjectsState = TProjectsListData;
 
 type TProjectsReducer = Reducer<TProjectsState, TProjectsActionScheme>;
 
