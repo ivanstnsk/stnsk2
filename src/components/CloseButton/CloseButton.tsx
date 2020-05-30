@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 
-import { SvgIcon } from 'components';
+import { SvgIcon } from '../SvgIcon';
 
 import { useStyles } from './styles';
 

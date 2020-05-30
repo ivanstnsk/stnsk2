@@ -1,11 +1,10 @@
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { CategoryLabel } from 'components';
+import { CategoryLabel, CloseButton } from 'components';
 import { TContentSize } from 'types/sizes';
 import { Routes } from 'types';
 
-import { CloseButton } from './components';
 import { useStyles } from './styles';
 
 
