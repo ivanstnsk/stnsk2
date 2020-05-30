@@ -103,7 +103,7 @@ const styles: AppStyles = ({
       alignItems: 'center',
       boxSizing: 'border-box',
     },
-    titleContainer: {
+    midContainer: {
       display: 'flex',
       flex: 1,
       flexDirection: 'column',
@@ -111,11 +111,19 @@ const styles: AppStyles = ({
       justifyContent: 'center',
       marginLeft: 50,
     },
+    titleContainer: {
+      display: 'flex',
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+    },
     title: {
       fontSize: 34,
       fontWeight: 'normal',
       lineHeight: '42px',
       color: greyUltralight,
+      marginRight: 30,
     },
     subTitle: ({ size }: TStyleProps) => ({
       fontSize: 18,

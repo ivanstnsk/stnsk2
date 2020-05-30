@@ -16,7 +16,11 @@ export type TSvgIconType =
 | 'linkedin'
 | 'not-found'
 | 'close'
-| 'maintenance';
+| 'maintenance'
+| 'schedule'
+| 'work-result'
+| 'achievements'
+| 'team';
 
 export interface SvgIconInnerProps {
   color: string;

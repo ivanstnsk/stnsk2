@@ -21,6 +21,10 @@ import {
   TelescopeIcon,
   CloseIcon,
   MaintenanceIcon,
+  ProjectCalendarIcon,
+  WorkResultIcon,
+  AchievementsIcon,
+  TeamIcon,
 } from './icons';
 import { TSvgIconType, SvgIconInnerProps } from './types';
 
@@ -50,6 +54,10 @@ const getIcon = (type: TSvgIconType): React.FC<SvgIconInnerProps> => {
     case 'not-found': return TelescopeIcon;
     case 'close': return CloseIcon;
     case 'maintenance': return MaintenanceIcon;
+    case 'schedule': return ProjectCalendarIcon;
+    case 'work-result': return WorkResultIcon;
+    case 'achievements': return AchievementsIcon;
+    case 'team': return TeamIcon;
     default: return CVIcon;
   }
 };

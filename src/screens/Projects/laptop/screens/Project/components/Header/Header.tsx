@@ -1,6 +1,7 @@
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 
+import { CategoryLabel } from 'components';
 import { TContentSize } from 'types/sizes';
 import { Routes } from 'types';
 
@@ -27,10 +28,14 @@ export const Header: React.FC<HeaderProps> = ({
       <div className={classes.container}>
         <div className={classes.innerContainer}>
           <div className={classes.photo} />
-          <div className={classes.titleContainer}>
-            <div className={classes.title}>
-              Virtual Tours
-          </div>
+          <div className={classes.midContainer}>
+            <div className={classes.titleContainer}>
+              <div className={classes.title}>Virtual Tours</div>
+              <CategoryLabel
+                type="web"
+                label="Web"
+              />
+            </div>
             <div className={classes.subTitle}>
               The marketplace for creating, celling and<br />
             purchasing virtual tours in the city (virtual guidance).<br />

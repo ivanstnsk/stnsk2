@@ -21,8 +21,8 @@ const CloseButtonComp: React.FC<CloseButtonProps> = ({
     >
       <SvgIcon
         type="close"
-        width={40}
-        height={40}
+        width={30}
+        height={30}
         color="rgba(255,255,255,0.6)"
       />
     </button>
