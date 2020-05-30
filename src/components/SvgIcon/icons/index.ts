@@ -26,3 +26,4 @@ export { WorkResultIcon } from './WorkResultIcon';
 export { AchievementsIcon } from './AchievementsIcon';
 export { TeamIcon } from './TeamIcon';
 export { DirectionArrowIcon } from './DirectionArrowIcon';
+export { TechIcon } from './TechIcon';

@@ -21,4 +21,5 @@ export type TSvgIconType =
 | 'work-result'
 | 'achievements'
 | 'team'
-| 'direction-arrow';
+| 'direction-arrow'
+| 'tech';
