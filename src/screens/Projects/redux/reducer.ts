@@ -8,10 +8,7 @@ import { ProjectsActions, TProjectsActionScheme } from './actions';
 
 type TProjectsReducer = Reducer<TProjectsState, TProjectsActionScheme>;
 
-const initState: TProjectsListData = {
-  commercial: [],
-  personal: [],
-};
+const initState: TProjectsListData = [];
 
 export const projectsReducer: TProjectsReducer = (
   state = initState,
@@ -19,10 +16,7 @@ export const projectsReducer: TProjectsReducer = (
 ) => {
   switch (type) {
     case ProjectsActions.SET_PROJECTS:
-      return {
-        ...state,
-        ...(payload as TProjectsListData),
-      };
+      return payload as TProjectsListData;
     default:
       return state;
   }

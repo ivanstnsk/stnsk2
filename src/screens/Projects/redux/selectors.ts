@@ -11,7 +11,7 @@ export const selectCommercialProjects = createSelector<
   TProjectsState,
   TProjectData[]>(
     selectProjects,
-    (projects) => projects.commercial,
+    (projects) => projects.filter(({ type }) => type === 'commercial'),
   );
 
 export const selectPersonalProjects = createSelector<
@@ -19,5 +19,5 @@ export const selectPersonalProjects = createSelector<
   TProjectsState,
   TProjectData[]>(
     selectProjects,
-    (projects) => projects.personal,
+    (projects) => projects.filter(({ type }) => type === 'personal'),
   );
