@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { TSvgIconType } from 'types/icons';
 import { combineClasses } from 'utils/styles';
 
 import {
@@ -26,7 +27,7 @@ import {
   AchievementsIcon,
   TeamIcon,
 } from './icons';
-import { TSvgIconType, SvgIconInnerProps } from './types';
+import { SvgIconInnerProps } from './types';
 
 
 interface SvgIconProps extends SvgIconInnerProps {
