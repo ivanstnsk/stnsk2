@@ -1,4 +1,5 @@
 import React, { memo } from 'react';
+import { Provider } from 'react-redux';
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,6 +7,7 @@ import {
 } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
 
+import { store } from 'store';
 import { Routes } from 'types';
 import { Menu, TransitionScreenWrapper, AccessDenied, Footer } from 'components';
 import {
@@ -41,7 +43,7 @@ const AppContainerComp: React.FC<{}> = () => {
   }
 
   return (
-    <>
+    <Provider store={store}>
       <Router>
         <Switch>
           <Route exact path={Routes.HOME}>
@@ -76,7 +78,7 @@ const AppContainerComp: React.FC<{}> = () => {
           </Route>
         </Switch>
       </Router>
-    </>
+    </Provider>
   );
 };
 
