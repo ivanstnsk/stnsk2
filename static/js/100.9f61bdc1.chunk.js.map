@@ -1,0 +1,1 @@
+{"version":3,"sources":["screens/About/laptop/components/Header/img/photo.jpg"],"names":["module","exports"],"mappings":"qFAAAA,EAAOC,QAAU,IAA0B","file":"static/js/100.9f61bdc1.chunk.js","sourcesContent":["module.exports = __webpack_public_path__ + \"static/media/photo.c0998b20.jpg\";"],"sourceRoot":""}
