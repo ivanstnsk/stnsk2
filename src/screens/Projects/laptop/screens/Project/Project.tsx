@@ -61,16 +61,6 @@ export const Project: React.FC<ProjectProps> = ({
               <ScrollContent onScroll={onScrollY}>
                 <ContentContainer>
                   <SectionWithIcon
-                    iconType="schedule"
-                    title="Project schedule"
-                    ContentComponent={(
-                      <DateRange
-                        from={['2019', 'October']}
-                        to={['2019', 'October']}
-                      />
-                    )}
-                  />
-                  <SectionWithIcon
                     iconType="work-result"
                     title="Work results"
                     lines={[
@@ -89,6 +79,16 @@ export const Project: React.FC<ProjectProps> = ({
                     ]}
                   />
                   <SectionWithIcon
+                    iconType="schedule"
+                    title="Project schedule"
+                    ContentComponent={(
+                      <DateRange
+                        from={['2019', 'October']}
+                        to={['2019', 'October']}
+                      />
+                    )}
+                  />
+                  <SectionWithIcon
                     iconType="team"
                     title="Team"
                     ContentComponent={(
@@ -101,6 +101,13 @@ export const Project: React.FC<ProjectProps> = ({
                         ]}
                       />
                     )}
+                  />
+                  <SectionWithIcon
+                    iconType="tech"
+                    title="Technologies"
+                    lines={[
+                      'react-native, react, redux, redux-saga, styled-components, react-navigation, react-router-dom, react-native-fbsdk, react-native-google-login, react-native-twitter-sigin, react-native-maps, google maps, google directions API, react-native-compass, geolib, react-native-video, mapbox modules, ios in app purchase',
+                    ]}
                   />
                 </ContentContainer>
               </ScrollContent>
