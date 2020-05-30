@@ -20,4 +20,5 @@ export type TSvgIconType =
 | 'schedule'
 | 'work-result'
 | 'achievements'
-| 'team';
+| 'team'
+| 'direction-arrow';

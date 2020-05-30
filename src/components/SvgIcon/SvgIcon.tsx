@@ -26,6 +26,7 @@ import {
   WorkResultIcon,
   AchievementsIcon,
   TeamIcon,
+  DirectionArrowIcon,
 } from './icons';
 import { SvgIconInnerProps } from './types';
 
@@ -59,6 +60,7 @@ const getIcon = (type: TSvgIconType): React.FC<SvgIconInnerProps> => {
     case 'work-result': return WorkResultIcon;
     case 'achievements': return AchievementsIcon;
     case 'team': return TeamIcon;
+    case 'direction-arrow': return DirectionArrowIcon;
     default: return CVIcon;
   }
 };
