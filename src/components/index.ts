@@ -18,3 +18,4 @@ export { TransitionInnerScreenWrapper } from './TransitionInnerScreenWrapper';
 export { AccessDenied } from './AccessDenied';
 export { SectionWithIcon } from './SectionWithIcon';
 export { RowTable } from './RowTable';
+export { DateRange } from './DateRange';
