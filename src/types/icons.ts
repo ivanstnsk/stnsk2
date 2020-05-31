@@ -29,4 +29,5 @@ export type TSvgProjectIconType =
 | 'virtual-tours'
 | 'medical'
 | 'banking'
-| 'services';
+| 'services'
+| 'sport-fans';
