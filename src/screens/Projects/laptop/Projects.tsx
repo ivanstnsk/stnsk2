@@ -56,14 +56,10 @@ const ProjectsComp: React.FC<ProjectsProps> = ({
               {personal.map((data) => (
                 <ProjectCard
                   key={data.id}
-                  id={data.id}
+                  data={data}
                   onClick={handleProjectClick}
                 />
               ))}
-              <ProjectCard
-                id="1254234"
-                onClick={handleProjectClick}
-              />
             </div>
           </div>
           <SectionTitle>Commercial projects under NDA</SectionTitle>
@@ -72,7 +68,7 @@ const ProjectsComp: React.FC<ProjectsProps> = ({
               {commercial.map((data) => (
                 <ProjectCard
                   key={data.id}
-                  id={data.id}
+                  data={data}
                   onClick={handleProjectClick}
                 />
               ))}

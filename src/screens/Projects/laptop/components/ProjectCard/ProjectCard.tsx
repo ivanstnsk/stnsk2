@@ -1,20 +1,22 @@
 import React, { useCallback } from 'react';
 
+import { TProjectData } from 'types/data';
 import { CategoryLabel, SvgProjectIcon } from 'components';
 
 import { useStyles } from './styles';
 
 
 interface ProjectCardProps {
-  id: string;
+  data: TProjectData;
   onClick: (projectId: string) => void;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
-  id,
+  data,
   onClick,
 }) => {
   const classes = useStyles();
+  const { id, title, tags } = data;
 
   const handleClick = useCallback(() => {
     if (onClick) {
@@ -35,15 +37,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           height={80}
         />
       </div>
-      <div className={classes.text}>
-        Virtual Tours App
-      </div>
+      <div className={classes.text}>{title}</div>
       <div className={classes.labelsContainer}>
-        <CategoryLabel
-          type="mobile"
-          label="Mobile"
-          size="small"
-        />
+        {tags.map((tag) => (
+          <CategoryLabel
+            key={`${id}${tag}`}
+            type={tag}
+            label={tag}
+            size="small"
+          />
+        ))}
       </div>
       <svg
         className={classes.svg}
