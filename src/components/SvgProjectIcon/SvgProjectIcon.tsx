@@ -10,6 +10,7 @@ import {
   BankingIcon,
   ServicesIcon,
   SportFansIcon,
+  ControlPanelIcon,
   OtherIcon,
 } from './icons';
 import { SvgProjectIconInnerProps } from './types';
@@ -28,6 +29,7 @@ const getIcon = (type: TSvgProjectIconType): React.FC<SvgProjectIconInnerProps> 
     case 'banking': return BankingIcon;
     case 'services': return ServicesIcon;
     case 'sport-fans': return SportFansIcon;
+    case 'control-panel': return ControlPanelIcon;
     default: return OtherIcon;
   }
 };

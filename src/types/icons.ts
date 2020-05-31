@@ -30,4 +30,5 @@ export type TSvgProjectIconType =
 | 'medical'
 | 'banking'
 | 'services'
-| 'sport-fans';
+| 'sport-fans'
+| 'control-panel';
