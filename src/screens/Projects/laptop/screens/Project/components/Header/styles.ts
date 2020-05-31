@@ -136,11 +136,6 @@ const styles: AppStyles = ({
       transition: 'all 0.2s ease',
     }),
     photo: ({ size }: TStyleProps) => ({
-      backgroundImage: 'url(https://www.tonincasa.it/public/crop/1200-660/110718-122443-virtualtour.jpg)',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'cover',
-      borderRadius: 10,
       ...getPhotoStyles(size),
       transition: 'all 0.4s ease',
     }),

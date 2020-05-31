@@ -65,6 +65,7 @@ export const Project: React.FC<ProjectProps> = ({
   const {
     title,
     subTitle,
+    iconType,
     tags,
     team,
     dates,
@@ -96,6 +97,7 @@ export const Project: React.FC<ProjectProps> = ({
                 title={title}
                 subTitle={subTitle}
                 tags={tags}
+                iconType={iconType}
               />
               <ScrollContent onScroll={onScrollY}>
                 <ContentContainer>

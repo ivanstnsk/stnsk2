@@ -1,7 +1,8 @@
 import React, { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { CategoryLabel, CloseButton } from 'components';
+import { CategoryLabel, CloseButton, SvgProjectIcon } from 'components';
+import { TSvgProjectIconType } from 'types/icons';
 import { TContentSize } from 'types/sizes';
 import { Routes } from 'types';
 
@@ -13,6 +14,7 @@ interface HeaderProps {
   title: string;
   subTitle: string;
   tags: string[];
+  iconType: TSvgProjectIconType;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -20,6 +22,7 @@ export const Header: React.FC<HeaderProps> = ({
   title,
   subTitle,
   tags,
+  iconType,
 }) => {
   const history = useHistory();
   const classes = useStyles({ size });
@@ -32,7 +35,13 @@ export const Header: React.FC<HeaderProps> = ({
     <div className={classes.wrapper}>
       <div className={classes.container}>
         <div className={classes.innerContainer}>
-          <div className={classes.photo} />
+          <SvgProjectIcon
+            type={iconType}
+            color="rgba(255,255,255,0.5)"
+            width={160}
+            height={160}
+            className={classes.photo}
+          />
           <div className={classes.midContainer}>
             <div className={classes.titleContainer}>
               <div className={classes.title}>{title}</div>
