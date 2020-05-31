@@ -40,6 +40,34 @@ export const Project: React.FC<ProjectProps> = ({
   const classes = useStyles();
   const isVisible = !!projectId;
 
+  if (!data) {
+    return (
+      <Transition
+        in={isVisible}
+        timeout={300}
+        unmountOnExit
+      >
+        {(state) => (
+          <TransitionInnerScreenWrapper
+            transitionState={state}
+            offsetSize={offsetSize}
+          >
+            <div className={classes.wrapper}>
+              <EmptyHeader />
+              <NoPage />
+            </div>
+          </TransitionInnerScreenWrapper>
+        )}
+      </Transition>
+    );
+  }
+
+  const {
+    title,
+    subTitle,
+    tags,
+  } = data;
+
   return (
     <Transition
       in={isVisible}
@@ -60,8 +88,9 @@ export const Project: React.FC<ProjectProps> = ({
             ) : (<>
               <Header
                 size={headerSize}
-                title={data.title}
-                subTitle={data.subTitle}
+                title={title}
+                subTitle={subTitle}
+                tags={tags}
               />
               <ScrollContent onScroll={onScrollY}>
                 <ContentContainer>

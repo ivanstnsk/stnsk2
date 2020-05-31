@@ -12,12 +12,14 @@ interface HeaderProps {
   size?: TContentSize;
   title: string;
   subTitle: string;
+  tags: string[];
 }
 
 export const Header: React.FC<HeaderProps> = ({
   size = 'normal',
   title,
   subTitle,
+  tags,
 }) => {
   const history = useHistory();
   const classes = useStyles({ size });
@@ -34,10 +36,13 @@ export const Header: React.FC<HeaderProps> = ({
           <div className={classes.midContainer}>
             <div className={classes.titleContainer}>
               <div className={classes.title}>{title}</div>
-              <CategoryLabel
-                type="web"
-                label="Web"
-              />
+              {tags.map((tag) => (
+                <CategoryLabel
+                  key={tag}
+                  type={tag}
+                  label={tag}
+                />
+              ))}
             </div>
             <div className={classes.subTitle}>{subTitle}</div>
           </div>

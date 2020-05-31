@@ -7,7 +7,7 @@ import { useStyles } from './styles';
 interface CategoryLabelProps {
   label: string;
   size?: TCategoryLabelSize;
-  type: TCategoryLabelType;
+  type: string;
 }
 
 export const CategoryLabel: React.FC<CategoryLabelProps> = ({
@@ -15,7 +15,7 @@ export const CategoryLabel: React.FC<CategoryLabelProps> = ({
   size = 'normal',
   type,
 }) => {
-  const classes = useStyles({ size, type });
+  const classes = useStyles({ size, type: type as TCategoryLabelType });
 
   return (
     <div className={classes.label}>
