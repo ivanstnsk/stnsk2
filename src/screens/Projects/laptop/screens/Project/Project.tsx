@@ -102,12 +102,12 @@ export const Project: React.FC<ProjectProps> = ({
                   <SectionWithIcon
                     iconType="work-result"
                     title="Work results"
-                    lines={[workResults]}
+                    lines={workResults}
                   />
                   <SectionWithIcon
                     iconType="achievements"
                     title="Achievements"
-                    lines={[achievements]}
+                    lines={achievements}
                   />
                   <SectionWithIcon
                     iconType="schedule"
@@ -129,7 +129,7 @@ export const Project: React.FC<ProjectProps> = ({
                   <SectionWithIcon
                     iconType="tech"
                     title="Technologies"
-                    lines={[technologies]}
+                    lines={technologies}
                   />
                 </ContentContainer>
               </ScrollContent>

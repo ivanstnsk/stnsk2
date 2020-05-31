@@ -13,9 +13,9 @@ export type TProjectData = {
     from: [string, string];
     to: [string, string];
   };
-  technologies: string;
-  workResults: string;
-  achievements: string;
+  technologies: string[];
+  workResults: string[];
+  achievements: string[];
 };
 
 export type TProjectsListData = TProjectData[];
