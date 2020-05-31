@@ -69,6 +69,7 @@ export const Project: React.FC<ProjectProps> = ({
     team,
     dates,
     technologies,
+    workResults,
   } = data;
 
   return (
@@ -100,11 +101,7 @@ export const Project: React.FC<ProjectProps> = ({
                   <SectionWithIcon
                     iconType="work-result"
                     title="Work results"
-                    lines={[
-                      'Reviwed the work of the other React Native developer',
-                      'Created iOS and Android dev & production builds',
-                      'Configured Apple AppStore & Testflight and Google Play Market',
-                    ]}
+                    lines={[workResults]}
                   />
                   <SectionWithIcon
                     iconType="achievements"
