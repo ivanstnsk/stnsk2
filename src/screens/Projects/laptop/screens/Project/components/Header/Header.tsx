@@ -26,6 +26,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   const history = useHistory();
   const classes = useStyles({ size });
+  const iconSize = size === 'normal' ? 160 : 60;
 
   const handleCloseClick = useCallback(() => {
     history.push(Routes.PROJECTS);
@@ -38,8 +39,8 @@ export const Header: React.FC<HeaderProps> = ({
           <SvgProjectIcon
             type={iconType}
             color="rgba(255,255,255,0.5)"
-            width={160}
-            height={160}
+            width={iconSize}
+            height={iconSize}
             className={classes.photo}
           />
           <div className={classes.midContainer}>
