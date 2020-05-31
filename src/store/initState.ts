@@ -20,6 +20,7 @@ export const initState: TState = {
       },
       technologies: 'Lorem ipsum here',
       workResults: 'Lorem ipsum here',
+      achievements: 'Lorem ipsum here',
     },
     {
       id: 'test2',
@@ -38,6 +39,7 @@ export const initState: TState = {
       },
       technologies: 'Lorem ipsum here',
       workResults: 'Lorem ipsum here',
+      achievements: 'Lorem ipsum here',
     },
     {
       id: 'test3',
@@ -56,6 +58,7 @@ export const initState: TState = {
       },
       technologies: 'Lorem ipsum here',
       workResults: 'Lorem ipsum here',
+      achievements: 'Lorem ipsum here',
     },
     {
       id: 'test4',
@@ -74,6 +77,7 @@ export const initState: TState = {
       },
       technologies: 'Lorem ipsum here',
       workResults: 'Lorem ipsum here',
+      achievements: 'Lorem ipsum here',
     },
   ],
 };
