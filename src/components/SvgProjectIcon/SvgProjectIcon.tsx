@@ -1,13 +1,15 @@
 import React from 'react';
 
 import { combineClasses } from 'utils/styles';
+import { TSvgProjectIconType } from 'types/icons';
 
 import {
   TicketSaling,
   VirtualTours,
   Other,
+  MedicalIcon,
 } from './icons';
-import { TSvgProjectIconType, SvgProjectIconInnerProps } from './types';
+import { SvgProjectIconInnerProps } from './types';
 
 
 interface SvgProjectIconProps extends SvgProjectIconInnerProps {
@@ -19,6 +21,7 @@ const getIcon = (type: TSvgProjectIconType): React.FC<SvgProjectIconInnerProps> 
   switch (type) {
     case 'ticket-saling': return TicketSaling;
     case 'virtual-tours': return VirtualTours;
+    case 'medical': return MedicalIcon;
     default: return Other;
   }
 };

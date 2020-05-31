@@ -26,4 +26,5 @@ export type TSvgIconType =
 
 export type TSvgProjectIconType =
 | 'ticket-saling'
-| 'virtual-tours';
+| 'virtual-tours'
+| 'medical';
