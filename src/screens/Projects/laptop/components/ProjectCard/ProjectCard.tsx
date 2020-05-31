@@ -16,7 +16,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   onClick,
 }) => {
   const classes = useStyles();
-  const { id, title, tags } = data;
+  const { id, title, tags, iconType } = data;
 
   const handleClick = useCallback(() => {
     if (onClick) {
@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     >
       <div className={classes.imageContainer}>
         <SvgProjectIcon
-          type="virtual-tours"
+          type={iconType}
           color="rgba(255,255,255,0.5)"
           width={80}
           height={80}
