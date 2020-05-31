@@ -8,6 +8,7 @@ import {
   VirtualToursIcon,
   MedicalIcon,
   BankingIcon,
+  ServicesIcon,
   OtherIcon,
 } from './icons';
 import { SvgProjectIconInnerProps } from './types';
@@ -24,6 +25,7 @@ const getIcon = (type: TSvgProjectIconType): React.FC<SvgProjectIconInnerProps> 
     case 'virtual-tours': return VirtualToursIcon;
     case 'medical': return MedicalIcon;
     case 'banking': return BankingIcon;
+    case 'services': return ServicesIcon;
     default: return OtherIcon;
   }
 };
