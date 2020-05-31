@@ -30,10 +30,12 @@ const routes = [
   { path: Routes.ARTICLES, Component: Articles },
 ];
 
+const CLOSED = false;
+
 const AppContainerComp: React.FC<{}> = () => {
   const classes = useStyles();
 
-  if (process.env.NODE_ENV === 'production') {
+  if (CLOSED && process.env.NODE_ENV === 'production') {
     return (
       <>
         <AccessDenied />
