@@ -9,6 +9,11 @@ export const initState: TState = {
       title: 'Test 1',
       subTitle: 'Dispatch a few data fetching actions to a store instance and wait for them to complete before rendering the app on the server.',
       tags: ['web', 'mobile', 'bot'],
+      team: [
+        ['PM', '1'],
+        ['DEV', '6'],
+        ['QA', '2'],
+      ],
     },
     {
       id: 'test2',
@@ -16,6 +21,11 @@ export const initState: TState = {
       title: 'Test 2',
       subTitle: 'Dispatch a few data fetching actions to a store instance and wait for them to complete before rendering the app on the server.',
       tags: ['web', 'mobile', 'bot'],
+      team: [
+        ['PM', '1'],
+        ['DEV', '6'],
+        ['QA', '2'],
+      ],
     },
     {
       id: 'test3',
@@ -23,6 +33,11 @@ export const initState: TState = {
       title: 'Test 3',
       subTitle: 'Dispatch a few data fetching actions to a store instance and wait for them to complete before rendering the app on the server.',
       tags: ['web', 'mobile', 'bot'],
+      team: [
+        ['PM', '1'],
+        ['DEV', '6'],
+        ['QA', '2'],
+      ],
     },
     {
       id: 'test4',
@@ -30,6 +45,11 @@ export const initState: TState = {
       title: 'Test 4',
       subTitle: 'Dispatch a few data fetching actions to a store instance and wait for them to complete before rendering the app on the server.',
       tags: ['web', 'mobile', 'bot'],
+      team: [
+        ['PM', '1'],
+        ['DEV', '6'],
+        ['QA', '2'],
+      ],
     },
   ],
 };

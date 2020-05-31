@@ -8,6 +8,7 @@ export type TProjectData = {
   title: string;
   subTitle: string;
   tags: string[];
+  team: [string, string][];
 };
 
 export type TProjectsListData = TProjectData[];
