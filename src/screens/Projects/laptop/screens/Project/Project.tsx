@@ -68,6 +68,7 @@ export const Project: React.FC<ProjectProps> = ({
     tags,
     team,
     dates,
+    technologies,
   } = data;
 
   return (
@@ -134,9 +135,7 @@ export const Project: React.FC<ProjectProps> = ({
                   <SectionWithIcon
                     iconType="tech"
                     title="Technologies"
-                    lines={[
-                      'react-native, react, redux, redux-saga, styled-components, react-navigation, react-router-dom, react-native-fbsdk, react-native-google-login, react-native-twitter-sigin, react-native-maps, google maps, google directions API, react-native-compass, geolib, react-native-video, mapbox modules, ios in app purchase',
-                    ]}
+                    lines={[technologies]}
                   />
                 </ContentContainer>
               </ScrollContent>
