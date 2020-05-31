@@ -67,6 +67,7 @@ export const Project: React.FC<ProjectProps> = ({
     subTitle,
     tags,
     team,
+    dates,
   } = data;
 
   return (
@@ -118,8 +119,8 @@ export const Project: React.FC<ProjectProps> = ({
                     title="Project schedule"
                     ContentComponent={(
                       <DateRange
-                        from={['2019', 'October']}
-                        to={['2019', 'October']}
+                        from={dates.from}
+                        to={dates.to}
                       />
                     )}
                   />
