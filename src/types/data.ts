@@ -8,7 +8,7 @@ export type TProjectType =
 export type TProjectData = {
   id: string;
   type: TProjectType;
-  iconName: TSvgProjectIconType;
+  iconType: TSvgProjectIconType;
   title: string;
   subTitle: string;
   tags: string[];
