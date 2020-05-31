@@ -18,6 +18,7 @@ export const initState: TState = {
         from: ['oct', '2020'],
         to: ['oct', '2020'],
       },
+      technologies: 'Lorem ipsum here',
     },
     {
       id: 'test2',
@@ -34,6 +35,7 @@ export const initState: TState = {
         from: ['oct', '2020'],
         to: ['oct', '2020'],
       },
+      technologies: 'Lorem ipsum here',
     },
     {
       id: 'test3',
@@ -50,6 +52,7 @@ export const initState: TState = {
         from: ['oct', '2020'],
         to: ['oct', '2020'],
       },
+      technologies: 'Lorem ipsum here',
     },
     {
       id: 'test4',
@@ -66,6 +69,7 @@ export const initState: TState = {
         from: ['oct', '2020'],
         to: ['oct', '2020'],
       },
+      technologies: 'Lorem ipsum here',
     },
   ],
 };
