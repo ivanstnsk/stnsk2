@@ -1,3 +1,6 @@
+import { TSvgProjectIconType } from './icons';
+
+
 export type TProjectType =
 | 'commercial'
 | 'personal';
@@ -5,6 +8,7 @@ export type TProjectType =
 export type TProjectData = {
   id: string;
   type: TProjectType;
+  iconName: TSvgProjectIconType;
   title: string;
   subTitle: string;
   tags: string[];

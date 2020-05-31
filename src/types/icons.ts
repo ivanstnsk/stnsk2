@@ -23,3 +23,7 @@ export type TSvgIconType =
 | 'team'
 | 'direction-arrow'
 | 'tech';
+
+export type TSvgProjectIconType =
+| 'ticket-saling'
+| 'virtual-tours';

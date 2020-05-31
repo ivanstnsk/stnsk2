@@ -6,6 +6,7 @@ export const initState: TState = {
     {
       id: 'UN1',
       type: 'commercial',
+      iconName: 'ticket-saling',
       title: 'ID authentication App',
       subTitle: 'The mobile app for user ID authentication provided to be used by government & business.',
       tags: ['mobile'],
@@ -35,6 +36,7 @@ export const initState: TState = {
     {
       id: 'UN2',
       type: 'commercial',
+      iconName: 'ticket-saling',
       title: 'Medical marketplace',
       subTitle: 'The marketplace for purchasing medical drugs. Mobile app on the React Native framework.',
       tags: ['mobile'],
@@ -64,6 +66,7 @@ export const initState: TState = {
     {
       id: 'UN3',
       type: 'commercial',
+      iconName: 'ticket-saling',
       title: 'Web admin panel',
       subTitle: 'Admin panel for Ukrainian government service.',
       tags: ['web'],
@@ -91,6 +94,7 @@ export const initState: TState = {
     {
       id: 'UN4',
       type: 'commercial',
+      iconName: 'ticket-saling',
       title: 'Virtual tours marketplace',
       subTitle: 'The marketplace for creating, celling and purchasing virtual tours in the city (virtual guidance).',
       tags: ['mobile', 'web'],
@@ -120,6 +124,7 @@ export const initState: TState = {
     {
       id: 'UN5',
       type: 'commercial',
+      iconName: 'ticket-saling',
       title: 'Company internal services',
       subTitle: 'The mobile app for directly access for all internal services in the company',
       tags: ['mobile', 'web'],
@@ -149,6 +154,7 @@ export const initState: TState = {
     {
       id: 'UN6',
       type: 'commercial',
+      iconName: 'ticket-saling',
       title: 'Mobile banking app',
       subTitle: 'The mobile banking app',
       tags: ['mobile'],
@@ -177,6 +183,7 @@ export const initState: TState = {
     {
       id: 'UN7',
       type: 'commercial',
+      iconName: 'ticket-saling',
       title: 'Sport fan app',
       subTitle: 'The mobile application for sport clubs fans',
       tags: ['mobile'],
