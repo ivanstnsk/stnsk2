@@ -14,6 +14,7 @@ export type TProjectData = {
     to: [string, string];
   };
   technologies: string;
+  workResults: string;
 };
 
 export type TProjectsListData = TProjectData[];
