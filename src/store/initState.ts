@@ -14,6 +14,10 @@ export const initState: TState = {
         ['DEV', '6'],
         ['QA', '2'],
       ],
+      dates: {
+        from: ['oct', '2020'],
+        to: ['oct', '2020'],
+      },
     },
     {
       id: 'test2',
@@ -26,6 +30,10 @@ export const initState: TState = {
         ['DEV', '6'],
         ['QA', '2'],
       ],
+      dates: {
+        from: ['oct', '2020'],
+        to: ['oct', '2020'],
+      },
     },
     {
       id: 'test3',
@@ -38,6 +46,10 @@ export const initState: TState = {
         ['DEV', '6'],
         ['QA', '2'],
       ],
+      dates: {
+        from: ['oct', '2020'],
+        to: ['oct', '2020'],
+      },
     },
     {
       id: 'test4',
@@ -50,6 +62,10 @@ export const initState: TState = {
         ['DEV', '6'],
         ['QA', '2'],
       ],
+      dates: {
+        from: ['oct', '2020'],
+        to: ['oct', '2020'],
+      },
     },
   ],
 };

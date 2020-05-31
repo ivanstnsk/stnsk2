@@ -9,6 +9,10 @@ export type TProjectData = {
   subTitle: string;
   tags: string[];
   team: [string, string][];
+  dates: {
+    from: [string, string];
+    to: [string, string];
+  };
 };
 
 export type TProjectsListData = TProjectData[];
