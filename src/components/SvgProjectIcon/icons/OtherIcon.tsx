@@ -3,7 +3,7 @@ import React from 'react';
 import { SvgProjectIconInnerProps } from '../types';
 
 
-export const Other: React.FC<SvgProjectIconInnerProps> = ({
+export const OtherIcon: React.FC<SvgProjectIconInnerProps> = ({
   color,
   width,
   height,

@@ -1,4 +1,4 @@
-export {TicketSaling} from './TicketSaling';
-export {VirtualTours} from './VirtualTours';
-export {Other} from './Other';
+export {TicketSalingIcon} from './TicketSalingIcon';
+export {VirtualToursIcon} from './VirtualToursIcon';
+export {OtherIcon} from './OtherIcon';
 export {MedicalIcon} from './MedicalIcon';
