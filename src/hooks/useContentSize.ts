@@ -43,6 +43,8 @@ export const useContentSize = (sizes: THookProps): THook => {
   const handleScrollY = useCallback((scrollY: number) => {
     const nextSize = getContentSize(sizes, scrollY);
     setSize(nextSize);
+    // TODO Fix glitch on Projects screen
+    setSize('normal');
   }, [setSize, sizes]);
 
   return [
