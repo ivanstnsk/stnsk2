@@ -66,6 +66,7 @@ export const Project: React.FC<ProjectProps> = ({
     title,
     subTitle,
     tags,
+    team,
   } = data;
 
   return (
@@ -126,14 +127,7 @@ export const Project: React.FC<ProjectProps> = ({
                     iconType="team"
                     title="Team"
                     ContentComponent={(
-                      <RowTable
-                        rows={[
-                          ['Dev', '6'],
-                          ['QA', '2'],
-                          ['PM', '1'],
-                          ['UI/UX', '1'],
-                        ]}
-                      />
+                      <RowTable rows={team} />
                     )}
                   />
                   <SectionWithIcon
