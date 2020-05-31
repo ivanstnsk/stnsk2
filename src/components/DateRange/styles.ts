@@ -44,6 +44,7 @@ const styles: AppStyles = ({
       lineHeight: '35px',
       color: title,
       textAlign: 'center',
+      fontFamily: 'Quicksand, sans-serif',
     },
     cellText: {
       width: '100%',
@@ -53,6 +54,7 @@ const styles: AppStyles = ({
       color: text,
       textAlign: 'center',
       marginTop: 4,
+      fontFamily: 'Quicksand, sans-serif',
     },
     icon: {
       marginLeft: 40,

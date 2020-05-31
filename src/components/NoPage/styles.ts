@@ -19,6 +19,7 @@ const styles: AppStyles = ({ colors: { typography: { title, text } } }) => {
       height: 'auto',
       color: title,
       marginTop: 70,
+      fontFamily: 'Quicksand, sans-serif',
     },
     text: {
       fontSize: 18,
@@ -27,6 +28,7 @@ const styles: AppStyles = ({ colors: { typography: { title, text } } }) => {
       color: text,
       textAlign: 'center',
       marginTop: 40,
+      fontFamily: 'Quicksand, sans-serif',
     },
   };
 };

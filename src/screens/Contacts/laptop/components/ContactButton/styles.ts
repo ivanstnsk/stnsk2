@@ -35,6 +35,7 @@ const styles: AppStyles = ({
       lineHeight: '22px',
       color: title,
       marginLeft: 30,
+      fontFamily: 'Quicksand, sans-serif',
     },
   };
 };

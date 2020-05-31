@@ -15,12 +15,14 @@ const styles: AppStyles = ({
       fontSize: 50,
       fontWeight: 500,
       marginBottom: 16,
+      fontFamily: 'Quicksand, sans-serif',
     },
     text: {
       color: greyUltralight,
       fontSize: 18,
       fontWeight: 300,
       fontStyle: 'normal',
+      fontFamily: 'Quicksand, sans-serif',
     },
     innerContainer: {
       display: 'flex',

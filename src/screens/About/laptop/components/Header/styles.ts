@@ -32,6 +32,7 @@ const styles: AppStyles = ({
       fontWeight: 'normal',
       lineHeight: '42px',
       color: greyUltralight,
+      fontFamily: 'Quicksand, sans-serif',
     },
     subTitle: {
       fontSize: 18,
@@ -39,6 +40,7 @@ const styles: AppStyles = ({
       lineHeight: '22px',
       color: greyUltralight,
       marginTop: 20,
+      fontFamily: 'Quicksand, sans-serif',
     },
     photo: {
       width: 160,
@@ -56,7 +58,7 @@ const styles: AppStyles = ({
       flexDirection: 'row',
       alignItems: 'center',
       justifyContent: 'flex-start',
-      marginLeft: 60,
+      marginLeft: 40,
     },
   };
 };

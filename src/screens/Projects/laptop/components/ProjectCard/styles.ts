@@ -63,6 +63,7 @@ const styles: AppStyles = ({
       fontWeight: 300,
       lineHeight: '22px',
       color: greyUltralight,
+      fontFamily: 'Quicksand, sans-serif',
     },
     labelsContainer: {
       position: 'absolute',

@@ -6,7 +6,8 @@ const styles: AppStyles = ({ colors: { typography: { title } } }) => {
   return {
     title: {
       fontSize: 34,
-      fontWeight: 'normal',
+      fontWeight: 300,
+      fontFamily: 'Quicksand, sans-serif',
       lineHeight: '42px',
       color: title,
       marginBottom: 50,

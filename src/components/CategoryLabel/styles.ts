@@ -53,6 +53,7 @@ const styles: AppStyles = ({
       justifyContent: 'center',
       fontWeight: 'normal',
       color: title,
+      fontFamily: 'Quicksand, sans-serif',
       margin: 3,
       ...getSizeStyles(size),
     }),

@@ -57,6 +57,7 @@ const styles: AppStyles = ({
     title: ({ size }: TStyleProps) => ({
       fontWeight: '300',
       color: title,
+      fontFamily: 'Quicksand, sans-serif',
       ...getTitleStyles(size),
       transition: 'all 0.4s ease',
     }),
@@ -65,6 +66,7 @@ const styles: AppStyles = ({
       fontWeight: 300,
       lineHeight: '22px',
       color: subTitle,
+      fontFamily: 'Quicksand, sans-serif',
       marginTop: 5,
       opacity: size === 'compact' ? 0 : 1,
       height: size === 'compact' ? '0px' : 'auto',

@@ -33,6 +33,7 @@ const styles: AppStyles = ({ colors: { primary: { greenMedium } } }) => {
       borderRadius: '25px',
       padding: '0px',
       color: greenMedium,
+      fontFamily: 'Quicksand, sans-serif',
       cursor: 'pointer',
       fontSize: '18px',
       fontWeight: '500',

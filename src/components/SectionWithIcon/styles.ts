@@ -31,17 +31,19 @@ const styles: AppStyles = ({
     },
     title: {
       fontSize: 28,
-      fontWeight: 'normal',
+      fontWeight: 300,
       lineHeight: '42px',
       color: title,
       marginRight: 30,
+      fontFamily: 'Quicksand, sans-serif',
     },
     text: {
       fontSize: 18,
-      fontWeight: 'normal',
+      fontWeight: 300,
       lineHeight: '22px',
       color: text,
       marginTop: 30,
+      fontFamily: 'Quicksand, sans-serif',
     },
   };
 };

@@ -36,6 +36,7 @@ const styles: AppStyles = ({
       fontWeight: 300,
       lineHeight: '22px',
       color: greyUltralight,
+      fontFamily: 'Quicksand, sans-serif',
     },
     colRight: {
       marginLeft: 60,
