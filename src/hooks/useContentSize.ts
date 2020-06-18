@@ -44,7 +44,7 @@ export const useContentSize = (sizes: THookProps): THook => {
     const nextSize = getContentSize(sizes, scrollY);
     setSize(nextSize);
     // TODO Fix glitch on Projects screen
-    setSize('normal');
+    // setSize('normal');
   }, [setSize, sizes]);
 
   return [
