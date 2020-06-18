@@ -35,7 +35,9 @@ export const CardText: React.FC<CardTextProps> = ({
           <div key={line}>{line}</div>
         )) : null}
       </div>
-      {ContentComponent}
+      <div className={classes.content}>
+        {ContentComponent}
+      </div>
     </div>
   );
 };

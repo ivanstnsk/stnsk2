@@ -22,6 +22,14 @@ const styles: AppStyles = ({
       marginLeft: 20,
       marginRight: 20,
       marginBottom: 40,
+
+      transition: 'all 0.4s ease',
+
+      '&:hover': {
+        transform: 'scaleX(1.05) scaleY(1.05)',
+        boxShadow: '0px 3px 14px 3px rgba(0,0,0,0.31)',
+        transition: 'all 0.4s ease',
+      },
     },
     title: {
       fontSize: 30,
@@ -38,6 +46,12 @@ const styles: AppStyles = ({
       color: text,
       marginTop: 40,
       fontFamily: 'Quicksand, sans-serif',
+    },
+    content: {
+      display: 'flex',
+      width: '100%',
+      flexDirection: 'column',
+      alignItems: 'center',
     },
   };
 };

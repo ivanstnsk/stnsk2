@@ -6,7 +6,6 @@ import {
   ScrollContent,
   ContentContainer,
   TransitionInnerScreenWrapper,
-  SectionWithIcon,
   RowTable,
   DateRange,
   NoPage,
@@ -102,21 +101,6 @@ export const Project: React.FC<ProjectProps> = ({
               <ScrollContent onScroll={onScrollY}>
                 <ContentContainer innerClassName={classes.container}>
                   <CardText
-                    iconType="work-result"
-                    title="Work results"
-                    lines={workResults}
-                  />
-                  <CardText
-                    iconType="achievements"
-                    title="Achievements"
-                    lines={achievements}
-                  />
-                  <CardText
-                    iconType="tech"
-                    title="Technologies"
-                    lines={technologies}
-                  />
-                  <SectionWithIcon
                     iconType="schedule"
                     title="Project schedule"
                     ContentComponent={(
@@ -126,17 +110,27 @@ export const Project: React.FC<ProjectProps> = ({
                       />
                     )}
                   />
-                  <SectionWithIcon
+                  <CardText
                     iconType="team"
                     title="Team"
                     ContentComponent={(
                       <RowTable rows={team} />
                     )}
                   />
-                  <SectionWithIcon
+                  <CardText
                     iconType="tech"
                     title="Technologies"
                     lines={technologies}
+                  />
+                  <CardText
+                    iconType="work-result"
+                    title="Work results"
+                    lines={workResults}
+                  />
+                  <CardText
+                    iconType="achievements"
+                    title="Achievements"
+                    lines={achievements}
                   />
                 </ContentContainer>
               </ScrollContent>
