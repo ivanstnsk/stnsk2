@@ -3,7 +3,6 @@ import { useTStyles } from 'hooks';
 
 const styles: AppStyles = ({
   colors: {
-    primary: { bg, underline },
     typography: { title, text },
   },
 }) => {
@@ -19,46 +18,38 @@ const styles: AppStyles = ({
       alignItems: 'center',
     },
     cell: {
-      minWidth: 120,
-      borderColor: underline,
-      borderWidth: 1,
-      borderStyle: 'solid',
       display: 'table-cell',
       justifyContent: 'center',
       boxSizing: 'border-box',
-      paddingLeft: 15,
-      paddingRight: 15,
-      paddingTop: 10,
-      paddingBottom: 12,
       transition: 'all 0.4s ease',
 
       '&:hover': {
-        backgroundColor: bg,
+        transform: 'scaleX(1.05) scaleY(1.05)',
         transition: 'all 0.4s ease',
       },
     },
     cellTitle: {
       width: '100%',
-      fontSize: 28,
+      fontSize: 30,
       fontWeight: 300,
-      lineHeight: '35px',
+      lineHeight: '37px',
       color: title,
       textAlign: 'center',
       fontFamily: 'Quicksand, sans-serif',
     },
     cellText: {
       width: '100%',
-      fontSize: 18,
+      fontSize: 14,
       fontWeight: 300,
-      lineHeight: '22px',
+      lineHeight: '17px',
       color: text,
       textAlign: 'center',
-      marginTop: 4,
+      marginTop: 8,
       fontFamily: 'Quicksand, sans-serif',
     },
     icon: {
-      marginLeft: 40,
-      marginRight: 40,
+      marginLeft: 24,
+      marginRight: 24,
     },
   };
 };
