@@ -23,6 +23,11 @@ const styles: AppStyles = ({
       justifyContent: 'flex-start',
       alignItems: 'stretch',
     },
+    container: {
+      flexDirection: 'row !important',
+      justifyContent: 'center !important',
+      flexWrap: 'wrap',
+    },
   };
 };
 

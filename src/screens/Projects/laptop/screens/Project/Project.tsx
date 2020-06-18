@@ -15,7 +15,7 @@ import { TContentSize } from 'types/sizes';
 import { useContentSize } from 'hooks';
 
 import { useState } from './redux';
-import { Header, EmptyHeader } from './components';
+import { Header, EmptyHeader, CardText } from './components';
 import { useStyles } from './styles';
 
 
@@ -100,13 +100,13 @@ export const Project: React.FC<ProjectProps> = ({
                 iconType={iconType}
               />
               <ScrollContent onScroll={onScrollY}>
-                <ContentContainer>
-                  <SectionWithIcon
+                <ContentContainer innerClassName={classes.container}>
+                  <CardText
                     iconType="work-result"
                     title="Work results"
                     lines={workResults}
                   />
-                  <SectionWithIcon
+                  <CardText
                     iconType="achievements"
                     title="Achievements"
                     lines={achievements}
