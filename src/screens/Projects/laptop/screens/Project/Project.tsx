@@ -111,6 +111,11 @@ export const Project: React.FC<ProjectProps> = ({
                     title="Achievements"
                     lines={achievements}
                   />
+                  <CardText
+                    iconType="tech"
+                    title="Technologies"
+                    lines={technologies}
+                  />
                   <SectionWithIcon
                     iconType="schedule"
                     title="Project schedule"

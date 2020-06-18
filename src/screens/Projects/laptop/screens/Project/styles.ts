@@ -25,7 +25,6 @@ const styles: AppStyles = ({
     },
     container: {
       flexDirection: 'row !important',
-      justifyContent: 'center !important',
       flexWrap: 'wrap',
     },
   };
